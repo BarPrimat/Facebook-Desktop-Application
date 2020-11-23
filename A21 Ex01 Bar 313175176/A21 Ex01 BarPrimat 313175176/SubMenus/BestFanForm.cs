@@ -43,6 +43,7 @@ namespace DesktopGUI.SubMenus
             if(bestFanListBox.Items.Count == 0)
             {
                 MessageBox.Show("There is no like, comment in post or Photo");
+                bestFanListBox.Visible = !k_VisibleObject;
             }
             else
             {

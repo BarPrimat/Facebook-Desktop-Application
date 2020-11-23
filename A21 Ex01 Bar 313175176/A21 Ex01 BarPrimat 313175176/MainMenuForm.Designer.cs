@@ -251,7 +251,6 @@
         public System.Windows.Forms.Panel panelSideMenu;
         private System.Windows.Forms.Panel logoPanel;
         private System.Windows.Forms.Panel mainFillPanel;
-        private System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.Panel displaySubPanel;
         private System.Windows.Forms.PictureBox facebookPictureBox;
         private System.Windows.Forms.Panel mainDownPanel;

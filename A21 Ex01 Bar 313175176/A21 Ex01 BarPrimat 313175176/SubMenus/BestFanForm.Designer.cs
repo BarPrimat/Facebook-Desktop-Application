@@ -35,12 +35,12 @@ namespace DesktopGUI.SubMenus
             this.scoreForCommentLabel = new System.Windows.Forms.Label();
             this.scoreForCommentInPhotoNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.findButton = new System.Windows.Forms.Button();
-            this.bestFanListBox = new System.Windows.Forms.ListBox();
             this.titleLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.scoreForLikeInPostNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.scoreForCommentInPostNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.bestFanListBox = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.scoreForLikeInPhotoNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scoreForCommentInPhotoNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scoreForLikeInPostNumericUpDown)).BeginInit();
@@ -107,17 +107,6 @@ namespace DesktopGUI.SubMenus
             this.findButton.UseVisualStyleBackColor = true;
             this.findButton.Click += new System.EventHandler(this.findButton_Click);
             // 
-            // bestFanListBox
-            // 
-            this.bestFanListBox.FormattingEnabled = true;
-            this.bestFanListBox.HorizontalScrollbar = true;
-            this.bestFanListBox.ItemHeight = 20;
-            this.bestFanListBox.Location = new System.Drawing.Point(233, 295);
-            this.bestFanListBox.Name = "bestFanListBox";
-            this.bestFanListBox.Size = new System.Drawing.Size(382, 124);
-            this.bestFanListBox.TabIndex = 14;
-            this.bestFanListBox.Visible = false;
-            // 
             // titleLabel
             // 
             this.titleLabel.AutoSize = true;
@@ -163,6 +152,17 @@ namespace DesktopGUI.SubMenus
             this.scoreForCommentInPostNumericUpDown.Size = new System.Drawing.Size(70, 26);
             this.scoreForCommentInPostNumericUpDown.TabIndex = 17;
             // 
+            // bestFanListBox
+            // 
+            this.bestFanListBox.FormattingEnabled = true;
+            this.bestFanListBox.HorizontalScrollbar = true;
+            this.bestFanListBox.ItemHeight = 20;
+            this.bestFanListBox.Location = new System.Drawing.Point(233, 295);
+            this.bestFanListBox.Name = "bestFanListBox";
+            this.bestFanListBox.Size = new System.Drawing.Size(382, 124);
+            this.bestFanListBox.TabIndex = 14;
+            this.bestFanListBox.Visible = false;
+            // 
             // BestFanForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -198,11 +198,11 @@ namespace DesktopGUI.SubMenus
         private System.Windows.Forms.Label scoreForCommentLabel;
         private System.Windows.Forms.NumericUpDown scoreForCommentInPhotoNumericUpDown;
         private System.Windows.Forms.Button findButton;
-        private System.Windows.Forms.ListBox bestFanListBox;
         private System.Windows.Forms.Label titleLabel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NumericUpDown scoreForLikeInPostNumericUpDown;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown scoreForCommentInPostNumericUpDown;
+        private System.Windows.Forms.ListBox bestFanListBox;
     }
 }

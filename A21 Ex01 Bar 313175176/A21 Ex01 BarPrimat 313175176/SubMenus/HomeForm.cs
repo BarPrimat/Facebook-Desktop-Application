@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DesktopGUI.Properties;
 using FacebookWrapper.ObjectModel;
 
 namespace DesktopGUI.SubMenus
@@ -24,10 +27,12 @@ namespace DesktopGUI.SubMenus
             r_ParentForm = i_ParentForm;
             if(s_IsAlreadyLogIn)
             {
+                loginOrLogoutButton.Text = "Logout";
                 setInfo();
             }
             else
             {
+                loginOrLogoutButton.Text = "Login";
                 enabledOrDisableAllForms(!k_EnabledAllForms);
             }
         }
@@ -84,12 +89,24 @@ namespace DesktopGUI.SubMenus
             else
             {
                 Session.Logout();
+                clearAllItemsInScreen();
                 loginOrLogoutButton.Text = "Login";
                 MessageBox.Show("You are now logged out!");
                 s_IsAlreadyLogIn = false;
             }
 
             enabledOrDisableAllForms(needToEnable);
+        }
+
+        private void clearAllItemsInScreen()
+        {
+            infoTextBox.Clear();
+            friendsListBox.Items.Clear();
+            lastPostListBox.Items.Clear();
+            groupsListBox.Items.Clear();
+            eventListBox.Items.Clear();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeForm));
+            this.userPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("userPictureBox.Image")));
         }
 
         private void enabledOrDisableAllForms(bool i_EnabledAllForms)

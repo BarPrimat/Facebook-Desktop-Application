@@ -69,5 +69,14 @@ namespace DesktopGUI.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Resources\facebook-logo.png.
+        /// </summary>
+        internal static string Resources_facebook_logo_png {
+            get {
+                return ResourceManager.GetString("Resources\\facebook-logo.png", resourceCulture);
+            }
+        }
     }
 }

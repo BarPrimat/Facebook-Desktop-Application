@@ -109,10 +109,10 @@ namespace DesktopGUI.SubMenus
             // friendsListBox
             // 
             this.friendsListBox.FormattingEnabled = true;
+            this.friendsListBox.HorizontalScrollbar = true;
             this.friendsListBox.ItemHeight = 20;
-            this.friendsListBox.Location = new System.Drawing.Point(12, 187);
+            this.friendsListBox.Location = new System.Drawing.Point(16, 187);
             this.friendsListBox.Name = "friendsListBox";
-            this.friendsListBox.ScrollAlwaysVisible = true;
             this.friendsListBox.Size = new System.Drawing.Size(385, 124);
             this.friendsListBox.TabIndex = 7;
             // 
@@ -143,10 +143,10 @@ namespace DesktopGUI.SubMenus
             // groupsListBox
             // 
             this.groupsListBox.FormattingEnabled = true;
+            this.groupsListBox.HorizontalScrollbar = true;
             this.groupsListBox.ItemHeight = 20;
             this.groupsListBox.Location = new System.Drawing.Point(12, 337);
             this.groupsListBox.Name = "groupsListBox";
-            this.groupsListBox.ScrollAlwaysVisible = true;
             this.groupsListBox.Size = new System.Drawing.Size(385, 124);
             this.groupsListBox.TabIndex = 11;
             // 
@@ -177,10 +177,10 @@ namespace DesktopGUI.SubMenus
             // eventListBox
             // 
             this.eventListBox.FormattingEnabled = true;
+            this.eventListBox.HorizontalScrollbar = true;
             this.eventListBox.ItemHeight = 20;
             this.eventListBox.Location = new System.Drawing.Point(436, 337);
             this.eventListBox.Name = "eventListBox";
-            this.eventListBox.ScrollAlwaysVisible = true;
             this.eventListBox.Size = new System.Drawing.Size(382, 124);
             this.eventListBox.TabIndex = 15;
             // 
