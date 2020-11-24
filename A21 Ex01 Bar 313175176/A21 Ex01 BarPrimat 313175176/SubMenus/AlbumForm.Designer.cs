@@ -62,10 +62,10 @@ namespace DesktopGUI.SubMenus
             // albumListBox
             // 
             this.albumListBox.FormattingEnabled = true;
+            this.albumListBox.HorizontalScrollbar = true;
             this.albumListBox.ItemHeight = 20;
             this.albumListBox.Location = new System.Drawing.Point(12, 59);
             this.albumListBox.Name = "albumListBox";
-            this.albumListBox.ScrollAlwaysVisible = true;
             this.albumListBox.Size = new System.Drawing.Size(345, 104);
             this.albumListBox.TabIndex = 11;
             this.albumListBox.SelectedIndexChanged += new System.EventHandler(this.albumListBox_SelectedIndexChanged);
@@ -130,10 +130,10 @@ namespace DesktopGUI.SubMenus
             // pictureInAlbumListBox
             // 
             this.pictureInAlbumListBox.FormattingEnabled = true;
+            this.pictureInAlbumListBox.HorizontalScrollbar = true;
             this.pictureInAlbumListBox.ItemHeight = 20;
             this.pictureInAlbumListBox.Location = new System.Drawing.Point(12, 260);
             this.pictureInAlbumListBox.Name = "pictureInAlbumListBox";
-            this.pictureInAlbumListBox.ScrollAlwaysVisible = true;
             this.pictureInAlbumListBox.Size = new System.Drawing.Size(315, 104);
             this.pictureInAlbumListBox.TabIndex = 18;
             this.pictureInAlbumListBox.SelectedIndexChanged += new System.EventHandler(this.pictureInAlbumListBox_SelectedIndexChanged);

@@ -23,6 +23,7 @@ namespace DesktopGUI
         private Button m_CurrentButton;
         private Color m_LastColorOfCurrentButton;
         private readonly Panel r_LeftBorderPanelForSubButton;
+        private bool m_IsFirstOpenForm = true;
 
         public MainMenuForm()
         {
@@ -49,8 +50,6 @@ namespace DesktopGUI
                 m_CurrentButton.BackColor = Color.DarkSlateGray;
                 m_CurrentButton.ForeColor = i_Color;
                 m_CurrentButton.TextAlign = ContentAlignment.MiddleCenter;
-              //  m_CurrentButton.TextImageRelation = TextImageRelation.TextBeforeImage;
-               // m_CurrentButton.ImageAlign = ContentAlignment.MiddleRight;
                 // Left border
                 if(displaySubPanel.Visible)
                 {
@@ -88,7 +87,7 @@ namespace DesktopGUI
 
         private void openChildForm(Form i_ChildForm)
         {
-            if(i_ChildForm != m_ActionForm)
+            if(m_IsFirstOpenForm || i_ChildForm.Name != m_ActionForm.Name)
             {
                 m_ActionForm?.Close();
                 m_ActionForm = i_ChildForm;
@@ -99,6 +98,7 @@ namespace DesktopGUI
                 mainFillPanel.Tag = i_ChildForm;
                 i_ChildForm.BringToFront();
                 i_ChildForm.Show();
+                m_IsFirstOpenForm = false;
             }
         }
 
@@ -207,13 +207,13 @@ namespace DesktopGUI
         // Start sub menu of Features button
         private void bestFanButton_Click(object sender, EventArgs e)
         {
-            activateButton(sender, Color.Aquamarine);
+            activateButton(sender, Color.DodgerBlue);
             openChildForm(new BestFanForm());
         }
 
         private void mirrorButton_Click(object sender, EventArgs e)
         {
-            activateButton(sender, Color.Aquamarine);
+            activateButton(sender, Color.DodgerBlue);
             openChildForm(new MirrorForm());
         }
         // End sub menu of Features button

@@ -119,6 +119,7 @@
     <Compile Include="SubMenus\MirrorForm.Designer.cs">
       <DependentUpon>MirrorForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="WordsDatabase.cs" />
     <EmbeddedResource Include="MainMenuForm.resx">
       <DependentUpon>MainMenuForm.cs</DependentUpon>
     </EmbeddedResource>

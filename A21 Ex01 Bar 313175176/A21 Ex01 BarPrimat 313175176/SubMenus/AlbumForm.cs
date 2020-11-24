@@ -110,7 +110,7 @@ namespace DesktopGUI.SubMenus
                 }
                 else
                 {
-                    MessageBox.Show("First select Album");
+                    MessageBox.Show("First select album");
                 }
             }
             catch (Exception e)
