@@ -8,6 +8,7 @@ namespace DesktopGUI
     public class WordsDatabase
     {
         // Can replace in the future with NLP database that learn the pattern from the facebook text
+        // Or replace with real database in XML or json 
         private static readonly Dictionary<string, HashSet<string>> sr_WordsAndPatternDictionary = new Dictionary<string, HashSet<string>>()
         {
             { "cat", new HashSet<string>() { "love pets", "love cats"}},

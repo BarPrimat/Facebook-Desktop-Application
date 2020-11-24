@@ -41,24 +41,26 @@ namespace DesktopGUI.SubMenus
             // 
             // titleLabel
             // 
-            this.titleLabel.AutoSize = true;
-            this.titleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.titleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.titleLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.titleLabel.Location = new System.Drawing.Point(180, 9);
+            this.titleLabel.Location = new System.Drawing.Point(118, 9);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(467, 37);
+            this.titleLabel.Size = new System.Drawing.Size(611, 95);
             this.titleLabel.TabIndex = 6;
-            this.titleLabel.Text = "Find what we know about you";
+            this.titleLabel.Text = "Mirror mirror on the wall can you tell me what I interest for";
+            this.titleLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // explanationLabel
             // 
-            this.explanationLabel.AutoSize = true;
-            this.explanationLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.explanationLabel.Location = new System.Drawing.Point(230, 87);
+            this.explanationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.explanationLabel.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.explanationLabel.Location = new System.Drawing.Point(120, 104);
             this.explanationLabel.Name = "explanationLabel";
-            this.explanationLabel.Size = new System.Drawing.Size(51, 20);
+            this.explanationLabel.Size = new System.Drawing.Size(572, 133);
             this.explanationLabel.TabIndex = 7;
-            this.explanationLabel.Text = "label1";
+            this.explanationLabel.Text = "This feature designed to show your interests based on keywords that founded in yo" +
+    "ur posts and images.\r\nAs the sensitivity score you will select is higher, the co" +
+    "nclusions will be more accurate.";
             // 
             // letsStartButton
             // 
@@ -68,7 +70,7 @@ namespace DesktopGUI.SubMenus
             this.letsStartButton.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.letsStartButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.letsStartButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.letsStartButton.Location = new System.Drawing.Point(338, 257);
+            this.letsStartButton.Location = new System.Drawing.Point(372, 289);
             this.letsStartButton.Name = "letsStartButton";
             this.letsStartButton.Size = new System.Drawing.Size(109, 36);
             this.letsStartButton.TabIndex = 8;
@@ -81,7 +83,7 @@ namespace DesktopGUI.SubMenus
             this.whatKnowAboutYouListBox.FormattingEnabled = true;
             this.whatKnowAboutYouListBox.HorizontalScrollbar = true;
             this.whatKnowAboutYouListBox.ItemHeight = 20;
-            this.whatKnowAboutYouListBox.Location = new System.Drawing.Point(210, 299);
+            this.whatKnowAboutYouListBox.Location = new System.Drawing.Point(251, 344);
             this.whatKnowAboutYouListBox.Name = "whatKnowAboutYouListBox";
             this.whatKnowAboutYouListBox.Size = new System.Drawing.Size(382, 124);
             this.whatKnowAboutYouListBox.TabIndex = 15;
@@ -91,7 +93,7 @@ namespace DesktopGUI.SubMenus
             // 
             this.sensitivityOfAnalyzerLabel.AutoSize = true;
             this.sensitivityOfAnalyzerLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.sensitivityOfAnalyzerLabel.Location = new System.Drawing.Point(247, 228);
+            this.sensitivityOfAnalyzerLabel.Location = new System.Drawing.Point(281, 251);
             this.sensitivityOfAnalyzerLabel.Name = "sensitivityOfAnalyzerLabel";
             this.sensitivityOfAnalyzerLabel.Size = new System.Drawing.Size(191, 20);
             this.sensitivityOfAnalyzerLabel.TabIndex = 17;
@@ -99,7 +101,7 @@ namespace DesktopGUI.SubMenus
             // 
             // sensitivityOfAnalyzerNumericUpDown
             // 
-            this.sensitivityOfAnalyzerNumericUpDown.Location = new System.Drawing.Point(458, 226);
+            this.sensitivityOfAnalyzerNumericUpDown.Location = new System.Drawing.Point(492, 249);
             this.sensitivityOfAnalyzerNumericUpDown.Minimum = new decimal(new int[] {
             1,
             0,

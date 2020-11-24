@@ -31,12 +31,14 @@ namespace DesktopGUI.SubMenus
 
         private void fetchFindBestFan()
         {
-            List<string> listOfBestFan = FindBestFan((int)scoreForLikeInPhotoNumericUpDown.Value, (int)scoreForCommentInPhotoNumericUpDown.Value, (int)scoreForLikeInPostNumericUpDown.Value, (int)scoreForCommentInPostNumericUpDown.Value);
+            List<User> listOfBestFan = FindBestFan(k_NumberOfBestFanToShow, (int)scoreForLikeInPhotoNumericUpDown.Value, (int)scoreForCommentInPhotoNumericUpDown.Value, (int)scoreForLikeInPostNumericUpDown.Value, (int)scoreForCommentInPostNumericUpDown.Value);
 
             bestFanListBox.Items.Clear();
             bestFanListBox.DisplayMember = "Name";
-            foreach (string newFan in listOfBestFan)
+            int counterOfBestFan = 0;
+            foreach (User newFan in listOfBestFan)
             {
+                string.Format("{0}. {1} with the score: {2}", i, maxUserScore.Name, maxScore);
                 bestFanListBox.Items.Add(newFan);
             }
 
@@ -51,35 +53,40 @@ namespace DesktopGUI.SubMenus
             }
         }
 
-        private List<string> FindBestFan(int i_ScoreForLikeInPhoto, int i_ScoreForCommentInPhoto, int i_ScoreForLikeInPost, int i_ScoreForCommentInPost)
+        public List<User> FindBestFan(int i_NumberBestFanToReturn, int i_ScoreForLikeInPhoto, int i_ScoreForCommentInPhoto, int i_ScoreForLikeInPost, int i_ScoreForCommentInPost)
         {
-            List<string> listOfBestFan = new List<string>(k_NumberOfBestFanToShow);
+            List<User> listOfBestFan = new List<User>();
 
             calculatePhotoScore(i_ScoreForLikeInPhoto, i_ScoreForCommentInPhoto, k_CreateNewDictionary);
             calculatePostScore(i_ScoreForLikeInPost, i_ScoreForCommentInPost, !k_CreateNewDictionary);
-
-            for (int i = 0; i < k_NumberOfBestFanToShow; i++)
+            for (int i = 0; i < i_NumberBestFanToReturn; i++)
             {
-                int maxScore = 0;
-                User maxUserScore = null;
-
-                foreach (KeyValuePair<User, int> pair in m_FriendsScore)
-                {
-                    if (pair.Value > maxScore)
-                    {
-                        maxScore = pair.Value;
-                        maxUserScore = pair.Key;
-                    }
-                }
-
-                if(maxUserScore != null)
-                {
-                    listOfBestFan[i] = string.Format("{0}. {1} with the score: {2}", i, maxUserScore.Name, maxScore);
-                    m_FriendsScore.Remove(maxUserScore);
-                }
+                listOfBestFan.Add(FindNextBestFan());
             }
 
             return listOfBestFan;
+        }
+
+        private Tuple<User, int> FindNextBestFan()
+        {
+            int maxScore = 0;
+            User maxUserScore = null;
+
+            foreach (KeyValuePair<User, int> pair in m_FriendsScore)
+            {
+                if (pair.Value > maxScore)
+                {
+                    maxScore = pair.Value;
+                    maxUserScore = pair.Key;
+                }
+            }
+
+            if (maxUserScore != null)
+            {
+                m_FriendsScore.Remove(maxUserScore);
+            }
+
+            return new Tuple<User, int>(maxUserScore, maxScore);
         }
 
         private void calculatePostScore(int i_ScoreForLike, int i_ScoreForComment, bool i_CreateNewDictionary)
