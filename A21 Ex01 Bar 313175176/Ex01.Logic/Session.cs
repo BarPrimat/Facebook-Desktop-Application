@@ -20,6 +20,8 @@ namespace Ex01.Logic
         {
             try
             {
+              //  FacebookWrapper.FacebookService.s_CollectionLimit = 200;
+              //  FacebookWrapper.FacebookService.s_FbApiVersion = 2.8f;
                 if (m_LoginResult == null)
                 {
                     // Owner: design.patterns
@@ -85,15 +87,10 @@ namespace Ex01.Logic
                 {
                     m_LoggedInUser = m_LoginResult.LoggedInUser;
                 }
-                else
-                {
-                    // MessageBox.Show(m_LoginResult.ErrorMessage);
-                }
             }
             catch(Exception e)
             {
                 throw new Exception(e.Message);
-                throw;
             }
         }
 

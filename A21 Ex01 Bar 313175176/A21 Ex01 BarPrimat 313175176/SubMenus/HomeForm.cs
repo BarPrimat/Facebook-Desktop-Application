@@ -41,28 +41,34 @@ namespace Ex01.DesktopGUI
         private void loginButton_Click(object sender, EventArgs e)
         {
             bool needToEnable = false;
-
-            if(loginOrLogoutButton.Text == "Login")
+            try
             {
-                Session.LoginAndInit();
-                if(Session.Result.LoggedInUser != null)
+                if (loginOrLogoutButton.Text == "Login")
                 {
-                    setInfo();
-                    loginOrLogoutButton.Text = "Logout";
-                    needToEnable = k_EnabledAllForms;
-                    s_IsAlreadyLogIn = true;
+                    Session.LoginAndInit();
+                    if (Session.Result.LoggedInUser != null)
+                    {
+                        setInfo();
+                        loginOrLogoutButton.Text = "Logout";
+                        needToEnable = k_EnabledAllForms;
+                        s_IsAlreadyLogIn = true;
+                    }
                 }
-            }
-            else
-            {
-                Session.Logout();
-                clearAllItemsInScreen();
-                loginOrLogoutButton.Text = "Login";
-                MessageBox.Show("You are now logged out!");
-                s_IsAlreadyLogIn = false;
-            }
+                else
+                {
+                    Session.Logout();
+                    clearAllItemsInScreen();
+                    loginOrLogoutButton.Text = "Login";
+                    MessageBox.Show("You are now logged out!");
+                    s_IsAlreadyLogIn = false;
+                }
 
-            enabledOrDisableAllForms(needToEnable);
+                enabledOrDisableAllForms(needToEnable);
+            }
+            catch(Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
         }
 
         private void clearAllItemsInScreen()
@@ -83,6 +89,8 @@ namespace Ex01.DesktopGUI
             this.lastPostLinkLabel.Enabled = i_EnabledAllForms;
             this.groupsLinkLabel.Enabled = i_EnabledAllForms;
             this.eventLinkLabel.Enabled = i_EnabledAllForms;
+            this.statusTextBox.Enabled = i_EnabledAllForms;
+            this.checkInLinkLabel.Enabled = i_EnabledAllForms;
         }
 
         private void setInfo()
@@ -233,6 +241,53 @@ Education: {5}",
             catch (Exception e)
             {
                 lastPostListBox.Items.Add(e.Message);
+            }
+        }
+
+        private void statusTextBox_TextChanged(object sender, EventArgs e)
+        {
+            postStatusButton.Enabled = ("What's on your mind?" != postStatusButton.Text) && (postStatusButton.Text != string.Empty);
+        }
+
+        // DEPRECATED function
+        private void postStatusButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Session.LoggedInUser.PostStatus(statusTextBox.Text);
+                MessageBox.Show("The Status Posted!");
+            }
+            catch(Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
+        }
+
+        private void checkInLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            fetchCheckIn();
+        }
+
+        private void fetchCheckIn()
+        {
+            try
+            {
+                checkInListBox.Items.Clear();
+                this.checkInListBox.Items.Clear();
+                foreach (Checkin userCheckIn in Session.LoggedInUser.Checkins)
+                {
+                    this.checkInListBox.Items.Add(string.Format("Location: {0}, {1}   Time: {2}", userCheckIn.Place.Location.Country, userCheckIn.Place.Location.City, userCheckIn.UpdateTime));
+                }
+
+                if (checkInListBox.Items.Count == 0)
+                {
+                    checkInListBox.Items.Add("No Check Ins to retrive");
+                    return;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }
