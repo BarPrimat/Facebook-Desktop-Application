@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
 
-namespace DesktopGUI.SubMenus
+namespace Ex01.DesktopGUI
 {
     partial class AlbumForm
     {

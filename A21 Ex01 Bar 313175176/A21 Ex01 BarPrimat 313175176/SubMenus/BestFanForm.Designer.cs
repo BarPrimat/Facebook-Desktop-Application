@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace DesktopGUI.SubMenus
+namespace Ex01.DesktopGUI
 {
     partial class BestFanForm
     {
@@ -42,6 +42,7 @@ namespace DesktopGUI.SubMenus
             this.scoreForCommentInPostNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.bestFanListBox = new System.Windows.Forms.ListBox();
             this.explanationLabel = new System.Windows.Forms.Label();
+            this.findYourNextBestFanButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.scoreForLikeInPhotoNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scoreForCommentInPhotoNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scoreForLikeInPostNumericUpDown)).BeginInit();
@@ -100,7 +101,7 @@ namespace DesktopGUI.SubMenus
             this.findButton.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.findButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.findButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.findButton.Location = new System.Drawing.Point(360, 257);
+            this.findButton.Location = new System.Drawing.Point(360, 287);
             this.findButton.Name = "findButton";
             this.findButton.Size = new System.Drawing.Size(109, 36);
             this.findButton.TabIndex = 7;
@@ -160,7 +161,7 @@ namespace DesktopGUI.SubMenus
             this.bestFanListBox.ItemHeight = 20;
             this.bestFanListBox.Location = new System.Drawing.Point(233, 329);
             this.bestFanListBox.Name = "bestFanListBox";
-            this.bestFanListBox.Size = new System.Drawing.Size(382, 124);
+            this.bestFanListBox.Size = new System.Drawing.Size(402, 124);
             this.bestFanListBox.TabIndex = 14;
             this.bestFanListBox.Visible = false;
             // 
@@ -175,12 +176,30 @@ namespace DesktopGUI.SubMenus
             this.explanationLabel.TabIndex = 19;
             this.explanationLabel.Text = "Rate the importance of each one of the following properties";
             // 
+            // findYourNextBestFanButton
+            // 
+            this.findYourNextBestFanButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.findYourNextBestFanButton.FlatAppearance.BorderSize = 3;
+            this.findYourNextBestFanButton.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
+            this.findYourNextBestFanButton.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.findYourNextBestFanButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.findYourNextBestFanButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.findYourNextBestFanButton.Location = new System.Drawing.Point(486, 287);
+            this.findYourNextBestFanButton.Name = "findYourNextBestFanButton";
+            this.findYourNextBestFanButton.Size = new System.Drawing.Size(139, 36);
+            this.findYourNextBestFanButton.TabIndex = 20;
+            this.findYourNextBestFanButton.Text = "Find next fan";
+            this.findYourNextBestFanButton.UseVisualStyleBackColor = true;
+            this.findYourNextBestFanButton.Visible = false;
+            this.findYourNextBestFanButton.Click += new System.EventHandler(this.findYourNextBestFanButton_Click);
+            // 
             // BestFanForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(830, 480);
+            this.Controls.Add(this.findYourNextBestFanButton);
             this.Controls.Add(this.explanationLabel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.scoreForCommentInPostNumericUpDown);
@@ -218,5 +237,6 @@ namespace DesktopGUI.SubMenus
         private System.Windows.Forms.NumericUpDown scoreForCommentInPostNumericUpDown;
         private System.Windows.Forms.ListBox bestFanListBox;
         private System.Windows.Forms.Label explanationLabel;
+        private System.Windows.Forms.Button findYourNextBestFanButton;
     }
 }

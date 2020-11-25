@@ -5,9 +5,9 @@ using System.Text;
 using FacebookWrapper;
 using FacebookWrapper.ObjectModel;
 
-namespace DesktopGUI
+namespace Ex01.Logic
 {
-    internal class Session
+    public class Session
     {
         private static User m_LoggedInUser = null;
         private static LoginResult m_LoginResult = null;
@@ -87,7 +87,7 @@ namespace DesktopGUI
                 }
                 else
                 {
-                    MessageBox.Show(m_LoginResult.ErrorMessage);
+                    // MessageBox.Show(m_LoginResult.ErrorMessage);
                 }
             }
             catch(Exception e)

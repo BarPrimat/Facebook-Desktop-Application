@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Ex01.Logic;
 using FacebookWrapper.ObjectModel;
 
-namespace DesktopGUI.SubMenus
+namespace Ex01.DesktopGUI
 {
     public partial class AlbumForm : Form
     {
+        private const int k_NumberOfPartialPhotoToShow = 4;
         private Dictionary<Tuple<string, string>, Photo> m_PhotoFromAlbum = new Dictionary<Tuple<string, string>, Photo>();
 
         public AlbumForm()
@@ -62,10 +64,7 @@ namespace DesktopGUI.SubMenus
 
                     if (selectedAlbum != null)
                     {
-                        simplePictureInAlbumPictureBox1.LoadAsync(selectedAlbum.Photos[0]?.PictureNormalURL);
-                        simplePictureInAlbumPictureBox2.LoadAsync(selectedAlbum.Photos[1]?.PictureNormalURL);
-                        simplePictureInAlbumPictureBox3.LoadAsync(selectedAlbum.Photos[2]?.PictureNormalURL);
-                        simplePictureInAlbumPictureBox4.LoadAsync(selectedAlbum.Photos[3]?.PictureNormalURL);
+                        showPartialPhoto(selectedAlbum);
                     }
                     else
                     {
@@ -79,6 +78,37 @@ namespace DesktopGUI.SubMenus
             }
         }
 
+        private void showPartialPhoto(Album i_SelectedAlbum)
+        {
+            for (int i = 0; i < k_NumberOfPartialPhotoToShow; i++)
+            {
+                if (i_SelectedAlbum.Photos[i] != null)
+                {
+                    PictureBox pictureInAlbumPictureBox = null;
+                    switch (i)
+                    {
+                        case 0:
+                            pictureInAlbumPictureBox = simplePictureInAlbumPictureBox1;
+                            break;
+                        case 1:
+                            pictureInAlbumPictureBox = simplePictureInAlbumPictureBox2;
+                            break;
+                        case 2:
+                            pictureInAlbumPictureBox = simplePictureInAlbumPictureBox3;
+                            break;
+                        case 3:
+                            pictureInAlbumPictureBox = simplePictureInAlbumPictureBox4;
+                            break;
+                    }
+
+                    if (pictureInAlbumPictureBox != null)
+                    {
+                        pictureInAlbumPictureBox.LoadAsync(i_SelectedAlbum.Photos[i].PictureNormalURL);
+                    }
+                }
+            }
+        }
+
         private void showAlbumPictureLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             fetchPictureList();
@@ -88,9 +118,7 @@ namespace DesktopGUI.SubMenus
         {
             try
             {
-                pictureInAlbumListBox.Items.Clear();
-                pictureInAlbumListBox.DisplayMember = "Name";
-
+                pictureInAlbumListBox.Items.Clear(); 
                 if (albumListBox.SelectedItems.Count == 1)
                 {
                     Album selectedAlbum = albumListBox.SelectedItem as Album;
@@ -99,7 +127,7 @@ namespace DesktopGUI.SubMenus
 
                     foreach (Photo photo in selectedAlbum.Photos)
                     {
-                        string nameOfPhoto = photo.Name != string.Empty ? photo.Name : (photoFromAlbum.Count + 1).ToString();
+                        string nameOfPhoto = !string.IsNullOrEmpty(photo.Name) ? photo.Name : (photoFromAlbum.Count + 1).ToString();
                         Tuple<string, string> tuple = new Tuple<string, string>(nameOfPhoto, photo.Id);
 
                         photoFromAlbum.Add(tuple, photo);

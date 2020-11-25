@@ -7,8 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Ex01.Logic;
 
-namespace DesktopGUI.SubMenus
+namespace Ex01.DesktopGUI
 {
     public partial class MirrorForm : Form
     {
@@ -24,23 +25,29 @@ namespace DesktopGUI.SubMenus
 
         private void fetchLetsStart()
         {
-            List<string> listToDisplay = new PersonalityAnalyzer((int)sensitivityOfAnalyzerNumericUpDown.Value).Analyzer();
+            try
+            {
+                List<string> listToDisplay = new PersonalityAnalyzer((int)sensitivityOfAnalyzerNumericUpDown.Value).Analyzer();
 
-            whatKnowAboutYouListBox.Items.Clear();
-            whatKnowAboutYouListBox.DisplayMember = "Mirror";
-            foreach (string stringToDisplay in listToDisplay)
-            {
-                whatKnowAboutYouListBox.Items.Add(stringToDisplay);
-            }
+                whatKnowAboutYouListBox.Items.Clear();
+                foreach (string stringToDisplay in listToDisplay)
+                {
+                    whatKnowAboutYouListBox.Items.Add(stringToDisplay);
+                }
 
-            if (whatKnowAboutYouListBox.Items.Count == 0)
-            {
-                MessageBox.Show("There is no pattern that matches your post or not found any post to analyze");
-                whatKnowAboutYouListBox.Visible = false;
+                if (whatKnowAboutYouListBox.Items.Count == 0)
+                {
+                    MessageBox.Show("There is no pattern that matches your post or not found any post to analyze");
+                    whatKnowAboutYouListBox.Visible = false;
+                }
+                else
+                {
+                    whatKnowAboutYouListBox.Visible = true;
+                }
             }
-            else
+            catch(Exception e)
             {
-                whatKnowAboutYouListBox.Visible = true;
+                MessageBox.Show(e.Message);
             }
         }
     }

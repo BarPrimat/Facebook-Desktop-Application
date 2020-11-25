@@ -34,7 +34,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>DesktopGUI.Program</StartupObject>
+    <StartupObject>Ex01.DesktopGUI.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Facebook, Version=6.0.10.0, Culture=neutral, PublicKeyToken=58cb4f2111d1e6de, processorArchitecture=MSIL">
@@ -42,11 +42,8 @@
       <HintPath>.\Facebook.dll</HintPath>
     </Reference>
     <Reference Include="FbGraphApiWrapper, Version=8.0.0.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>.\FbGraphApiWrapper.dll</HintPath>
       <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\FontAwesome.Sharp.5.15.3\lib\net40\FontAwesome.Sharp.dll</HintPath>
+      <HintPath>.\FbGraphApiWrapper.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -73,10 +70,8 @@
     <Compile Include="MainMenuForm.Designer.cs">
       <DependentUpon>MainMenuForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PersonalityAnalyzer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Session.cs" />
     <Compile Include="SubMenus\AlbumForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,29 +84,11 @@
     <Compile Include="SubMenus\BestFanForm.Designer.cs">
       <DependentUpon>BestFanForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="SubMenus\FillVechileEnergyForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SubMenus\FillVechileEnergyForm.Designer.cs">
-      <DependentUpon>FillVechileEnergyForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="SubMenus\HomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SubMenus\HomeForm.Designer.cs">
       <DependentUpon>HomeForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SubMenus\InflateVehiclesTiresForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SubMenus\InflateVehiclesTiresForm.Designer.cs">
-      <DependentUpon>InflateVehiclesTiresForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SubMenus\InsertNewVehicleForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SubMenus\InsertNewVehicleForm.Designer.cs">
-      <DependentUpon>InsertNewVehicleForm.cs</DependentUpon>
     </Compile>
     <Compile Include="SubMenus\MirrorForm.cs">
       <SubType>Form</SubType>
@@ -119,7 +96,6 @@
     <Compile Include="SubMenus\MirrorForm.Designer.cs">
       <DependentUpon>MirrorForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="WordsDatabase.cs" />
     <EmbeddedResource Include="MainMenuForm.resx">
       <DependentUpon>MainMenuForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -142,17 +118,8 @@
     <EmbeddedResource Include="SubMenus\MirrorForm.resx">
       <DependentUpon>MirrorForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SubMenus\FillVechileEnergyForm.resx">
-      <DependentUpon>FillVechileEnergyForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="SubMenus\HomeForm.resx">
       <DependentUpon>HomeForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SubMenus\InflateVehiclesTiresForm.resx">
-      <DependentUpon>InflateVehiclesTiresForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SubMenus\InsertNewVehicleForm.resx">
-      <DependentUpon>InsertNewVehicleForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -169,13 +136,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Facebook.dll" />
     <Content Include="FbGraphApiWrapper.dll" />
     <Content Include="Resources\facebook-logo.png" />
     <Content Include="Resources\home-icon-silhouette.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ex01.Logic\Ex01.Logic.csproj">
+      <Project>{2f9575ab-bd71-4202-b6d4-748cd09c8977}</Project>
+      <Name>Ex01.Logic</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

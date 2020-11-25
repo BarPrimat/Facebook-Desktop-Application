@@ -9,15 +9,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
-using DesktopGUI.SubMenus;
-using FontAwesome.Sharp;
+using Ex01.DesktopGUI;
 using ContentAlignment = System.Drawing.ContentAlignment;
 
-namespace DesktopGUI
+namespace Ex01.DesktopGUI
 {
     public sealed partial class MainMenuForm : Form
     {
         private static readonly Size sr_SizeOfSelectSubPanel = new Size(7, 60);
+        private static readonly Color sr_LeftPanelColor = Color.Aquamarine;
+        private static readonly Color sr_LeftSubPanelColor = Color.DodgerBlue;
+        private static readonly Color sr_LeftButtonColorWhenSelected = Color.DarkSlateGray;
         private Form m_ActionForm;
         private readonly Panel r_LeftBorderPanelForButton;
         private Button m_CurrentButton;
@@ -47,7 +49,7 @@ namespace DesktopGUI
                 m_CurrentButton = newCurrentButton;
                 // Button change
                 m_LastColorOfCurrentButton = m_CurrentButton.BackColor;
-                m_CurrentButton.BackColor = Color.DarkSlateGray;
+                m_CurrentButton.BackColor = sr_LeftButtonColorWhenSelected;
                 m_CurrentButton.ForeColor = i_Color;
                 m_CurrentButton.TextAlign = ContentAlignment.MiddleCenter;
                 // Left border
@@ -81,7 +83,7 @@ namespace DesktopGUI
         private void initFirstMenu()
         { 
             displaySubPanel.Visible = false;
-            activateButton(homeButton, Color.Aquamarine);
+            activateButton(homeButton, sr_LeftPanelColor);
             homeButton_Click(null, EventArgs.Empty);
         }
 
@@ -133,59 +135,10 @@ namespace DesktopGUI
 
         private void homeButton_Click(object sender, EventArgs e)
         {
-            activeButtonAndHideSubMenu(sender, Color.Aquamarine);
+            activeButtonAndHideSubMenu(sender, sr_LeftPanelColor);
             openChildForm(new HomeForm(this));
         }
 
-        public void insertNewVehicleButton_Click(object sender, EventArgs e)
-        {
-            activeButtonAndHideSubMenu(sender, Color.Chartreuse);
-            openChildForm(new InflateVehiclesTiresForm());
-        }
-
-        public void displayButton_Click(object sender, EventArgs e)
-        {
-            activeButtonAndHideSubMenu(sender, Color.LawnGreen);
-            showSubMenu(displaySubPanel);
-            // specificVehicleButton_Click()
-        }
-
-        // Start sub menu of Display button
-        public void specificVehicleButton_Click(object sender, EventArgs e)
-        {
-            activateButton(sender, Color.Green);
-            openChildForm(new MirrorForm());
-        }
-
-        public void statusCategoryButton_Click(object sender, EventArgs e)
-        {
-            activateButton(sender, Color.Green);
-            openChildForm(new BestFanForm());
-        }
-        // End sub menu of Display button
-
-        public void changeStatusButton_Click(object sender, EventArgs e)
-        {
-            activeButtonAndHideSubMenu(sender, Color.Brown);
-            openChildForm(new AlbumForm());
-        }
-
-        public void inflateVehiclesTiresButton_Click(object sender, EventArgs e)
-        {
-            activeButtonAndHideSubMenu(sender, Color.RosyBrown);
-            openChildForm(new InflateVehiclesTiresForm());
-        }
-
-        public void fillVehicleEnergyButton_Click(object sender, EventArgs e)
-        {
-            activeButtonAndHideSubMenu(sender, Color.ForestGreen);
-            openChildForm(new FillVechileEnergyForm());
-        }
-
-        private void exitButton_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -194,29 +147,34 @@ namespace DesktopGUI
 
         private void featuresButton_Click(object sender, EventArgs e)
         {
-            activeButtonAndHideSubMenu(sender, Color.Aquamarine);
+            activeButtonAndHideSubMenu(sender, sr_LeftPanelColor);
             showSubMenu(displaySubPanel);
         }
 
         private void albumButton_Click(object sender, EventArgs e)
         {
-            activeButtonAndHideSubMenu(sender, Color.Aquamarine);
+            activeButtonAndHideSubMenu(sender, sr_LeftPanelColor);
             openChildForm(new AlbumForm());
         }
 
         // Start sub menu of Features button
         private void bestFanButton_Click(object sender, EventArgs e)
         {
-            activateButton(sender, Color.DodgerBlue);
+            activateButton(sender, sr_LeftSubPanelColor);
             openChildForm(new BestFanForm());
         }
 
         private void mirrorButton_Click(object sender, EventArgs e)
         {
-            activateButton(sender, Color.DodgerBlue);
+            activateButton(sender, sr_LeftSubPanelColor);
             openChildForm(new MirrorForm());
         }
         // End sub menu of Features button
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
 
         public void EnabledOrDisableAllForms(bool i_EnabledAllForms)
         {

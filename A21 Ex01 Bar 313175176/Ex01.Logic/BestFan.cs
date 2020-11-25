@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using FacebookWrapper.ObjectModel;
 
 namespace Ex01.Logic
@@ -19,7 +17,11 @@ namespace Ex01.Logic
             calculatePostScore(i_ScoreForLikeInPost, i_ScoreForCommentInPost, !k_CreateNewDictionary);
             for (int i = 0; i < i_NumberBestFanToReturn; i++)
             {
-                listOfBestFan.Add(FindNextBestFan());
+                Tuple<User, int> newBestFan = FindNextBestFan();
+                if(newBestFan != null)
+                {
+                    listOfBestFan.Add(newBestFan);
+                }
             }
 
             return listOfBestFan;
@@ -54,20 +56,13 @@ namespace Ex01.Logic
                 m_FriendsScore = new Dictionary<User, int>();
             }
 
-            try
+            if (i_ScoreForLike != 0 || i_ScoreForComment != 0)
             {
-                if (i_ScoreForLike != 0 || i_ScoreForComment != 0)
+                foreach (Post post in Session.LoggedInUser.Posts)
                 {
-                    foreach (Post post in Session.LoggedInUser.Posts)
-                    {
-                        calculatePostLikeScore(post, i_ScoreForLike);
-                        calculatePostCommentScore(post, i_ScoreForComment);
-                    }
+                    calculatePostLikeScore(post, i_ScoreForLike);
+                    calculatePostCommentScore(post, i_ScoreForComment);
                 }
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
             }
         }
 
@@ -100,20 +95,13 @@ namespace Ex01.Logic
                 m_FriendsScore = new Dictionary<User, int>();
             }
 
-            try
+            if (i_ScoreForLike != 0 || i_ScoreForComment != 0)
             {
-                if (i_ScoreForLike != 0 || i_ScoreForComment != 0)
+                foreach (Photo photo in Session.LoggedInUser.PhotosTaggedIn)
                 {
-                    foreach (Photo photo in Session.LoggedInUser.PhotosTaggedIn)
-                    {
-                        calculatePhotoLikeScore(photo, i_ScoreForLike);
-                        calculatePhotoCommentScore(photo, i_ScoreForComment);
-                    }
+                    calculatePhotoLikeScore(photo, i_ScoreForLike);
+                    calculatePhotoCommentScore(photo, i_ScoreForComment);
                 }
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
             }
         }
 

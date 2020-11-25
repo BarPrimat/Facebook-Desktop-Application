@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace DesktopGUI.SubMenus
+namespace Ex01.DesktopGUI
 {
     partial class HomeForm
     {
@@ -92,6 +92,7 @@ namespace DesktopGUI.SubMenus
             this.infoTextBox.Location = new System.Drawing.Point(436, 9);
             this.infoTextBox.Multiline = true;
             this.infoTextBox.Name = "infoTextBox";
+            this.infoTextBox.ReadOnly = true;
             this.infoTextBox.Size = new System.Drawing.Size(382, 144);
             this.infoTextBox.TabIndex = 9;
             // 

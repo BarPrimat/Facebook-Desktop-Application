@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using FacebookWrapper.ObjectModel;
 
-namespace DesktopGUI
+namespace Ex01.Logic
 {
     public class PersonalityAnalyzer
     {
         private readonly int r_Sensitivity;
         private readonly Dictionary<string, int> r_PatternAndThereAmountDictionary;
-        private static readonly HashSet<string> sr_StringExtension = new HashSet<string>(){",", ".", ":", ";", "[', ']", "(", ")", "<", ">", "!", "?", "@", "#", "*", "-", "'", "`", "'s", "ing"};
 
         public PersonalityAnalyzer(int i_Sensitivity)
         {
@@ -53,7 +52,7 @@ namespace DesktopGUI
         {
             foreach (Post post in Session.LoggedInUser.Posts)
             {
-                if (post.Message != null)
+                if (!string.IsNullOrEmpty(post.Message))
                 {
                     findAndUpdatePatternThatMatch(post.Message);
                 }
@@ -91,8 +90,7 @@ namespace DesktopGUI
         private static string clearStringFromExtensions(string i_TextToClear)
         {
             i_TextToClear = i_TextToClear.ToLower();
-            i_TextToClear = i_TextToClear.Replace("\\", " ");
-            foreach (string extension in sr_StringExtension)
+            foreach (string extension in WordsDatabase.StringExtension)
             {
                 i_TextToClear = i_TextToClear.Replace(extension, string.Empty);
             }
