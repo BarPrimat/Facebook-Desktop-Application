@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Ex01.Logic;
 using FacebookWrapper.ObjectModel;
@@ -138,7 +132,7 @@ namespace Ex01.DesktopGUI
                 }
                 else
                 {
-                    MessageBox.Show("First select album");
+                    MessageBox.Show("First select Album");
                 }
             }
             catch (Exception e)
@@ -160,10 +154,6 @@ namespace Ex01.DesktopGUI
                 {
                     Photo selectedPhoto = m_PhotoFromAlbum[((Tuple<string, string>)pictureInAlbumListBox.SelectedItem)] as Photo;
                     specificPhotoFromAlbumPictureBox.LoadAsync(selectedPhoto?.PictureNormalURL);
-                }
-                else
-                {
-                    MessageBox.Show("First select Album");
                 }
             }
             catch (Exception ex)

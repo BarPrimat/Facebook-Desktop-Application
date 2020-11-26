@@ -1,15 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Ex01.DesktopGUI.Properties;
 using FacebookWrapper.ObjectModel;
 using Ex01.Logic;
 
@@ -19,6 +10,8 @@ namespace Ex01.DesktopGUI
     {
         private const bool k_ObjectIsVisible = true;
         private const bool k_EnabledAllForms = true;
+        private const string k_LoginText = "Login";
+        private const string k_LogoutText = "Logout";
         private static bool s_IsAlreadyLogIn = false;
         private readonly MainMenuForm r_ParentForm;
 
@@ -28,12 +21,12 @@ namespace Ex01.DesktopGUI
             r_ParentForm = i_ParentForm;
             if(s_IsAlreadyLogIn)
             {
-                loginOrLogoutButton.Text = "Logout";
+                loginOrLogoutButton.Text = k_LogoutText;
                 setInfo();
             }
             else
             {
-                loginOrLogoutButton.Text = "Login";
+                loginOrLogoutButton.Text = k_LoginText;
                 enabledOrDisableAllForms(!k_EnabledAllForms);
             }
         }
@@ -48,13 +41,13 @@ namespace Ex01.DesktopGUI
             bool needToEnable = false;
             try
             {
-                if (loginOrLogoutButton.Text == "Login")
+                if (loginOrLogoutButton.Text == k_LoginText)
                 {
                     Session.LoginAndInit();
                     if (Session.Result.LoggedInUser != null)
                     {
                         setInfo();
-                        loginOrLogoutButton.Text = "Logout";
+                        loginOrLogoutButton.Text = k_LogoutText;
                         needToEnable = k_EnabledAllForms;
                         s_IsAlreadyLogIn = true;
                     }
@@ -63,7 +56,7 @@ namespace Ex01.DesktopGUI
                 {
                     clearAllItemsInScreen();
                     Session.Logout();
-                    loginOrLogoutButton.Text = "Login";
+                    loginOrLogoutButton.Text = k_LoginText;
                     MessageBox.Show("You are now logged out!");
                     s_IsAlreadyLogIn = false;
                 }
@@ -130,6 +123,12 @@ Education: {5}",
             }
         }
 
+        // DEPRECATED function
+        private void postStatusButton_Click(object sender, EventArgs e)
+        {
+            fetchPostStatus();
+        }
+
         private void friendsLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             fetchFriends();
@@ -148,6 +147,11 @@ Education: {5}",
         private void eventLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             fetchEvent();
+        }
+
+        private void checkInLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            fetchCheckIn();
         }
 
         private void fetchFriends()
@@ -260,11 +264,6 @@ Education: {5}",
         }
 
         // DEPRECATED function
-        private void postStatusButton_Click(object sender, EventArgs e)
-        {
-            fetchPostStatus();
-        }
-
         private void fetchPostStatus()
         {
             try
@@ -276,11 +275,6 @@ Education: {5}",
             {
                 MessageBox.Show(exception.Message);
             }
-        }
-
-        private void checkInLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            fetchCheckIn();
         }
 
         private void fetchCheckIn()
