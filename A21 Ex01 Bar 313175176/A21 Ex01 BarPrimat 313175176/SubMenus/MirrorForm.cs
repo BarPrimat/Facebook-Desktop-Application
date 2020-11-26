@@ -20,10 +20,10 @@ namespace Ex01.DesktopGUI
 
         private void letsStartButton_Click(object sender, EventArgs e)
         {
-            fetchLetsStart();
+            fetchFindPatternBehavior();
         }
 
-        private void fetchLetsStart()
+        private void fetchFindPatternBehavior()
         {
             try
             {

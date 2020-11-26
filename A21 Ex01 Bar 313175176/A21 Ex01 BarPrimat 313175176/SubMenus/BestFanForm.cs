@@ -34,7 +34,7 @@ namespace Ex01.DesktopGUI
             try
             {
                 m_BestFan = new BestFan();
-                List<Tuple<User, int>> listOfBestFan = m_BestFan.FindBestFan(k_NumberOfBestFanToShow, (int)scoreForLikeInPhotoNumericUpDown.Value, (int)scoreForCommentInPhotoNumericUpDown.Value, (int)scoreForLikeInPostNumericUpDown.Value, (int)scoreForCommentInPostNumericUpDown.Value);
+                List<Tuple<User, int>> listOfBestFan = m_BestFan.FindBestFans(k_NumberOfBestFanToShow, (int)scoreForLikeInPhotoNumericUpDown.Value, (int)scoreForCommentInPhotoNumericUpDown.Value, (int)scoreForLikeInPostNumericUpDown.Value, (int)scoreForCommentInPostNumericUpDown.Value);
 
                 bestFanListBox.Items.Clear();
                 foreach (Tuple<User, int> newFan in listOfBestFan)
@@ -75,6 +75,11 @@ namespace Ex01.DesktopGUI
 
         private void findYourNextBestFanButton_Click(object sender, EventArgs e)
         {
+            fetchFindNextBestFan();
+        }
+
+        private void fetchFindNextBestFan()
+        {
             try
             {
                 Tuple<User, int> listOfBestFan = m_BestFan.FindNextBestFan();
@@ -88,7 +93,7 @@ namespace Ex01.DesktopGUI
                     MessageBox.Show(@"There is no more fans");
                 }
             }
-            catch(Exception exception)
+            catch (Exception exception)
             {
                 MessageBox.Show(exception.Message);
             }

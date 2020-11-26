@@ -80,7 +80,7 @@ namespace Ex01.DesktopGUI
             this.loginOrLogoutButton.TabIndex = 5;
             this.loginOrLogoutButton.Text = "Login";
             this.loginOrLogoutButton.UseVisualStyleBackColor = true;
-            this.loginOrLogoutButton.Click += new System.EventHandler(this.loginButton_Click);
+            this.loginOrLogoutButton.Click += new System.EventHandler(this.loginOrLogoutButton_Click);
             // 
             // infoLabel
             // 
@@ -204,7 +204,7 @@ namespace Ex01.DesktopGUI
             // checkInLinkLabel
             // 
             this.checkInLinkLabel.AutoSize = true;
-            this.checkInLinkLabel.Location = new System.Drawing.Point(564, 314);
+            this.checkInLinkLabel.Location = new System.Drawing.Point(564, 321);
             this.checkInLinkLabel.Name = "checkInLinkLabel";
             this.checkInLinkLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.checkInLinkLabel.Size = new System.Drawing.Size(116, 20);

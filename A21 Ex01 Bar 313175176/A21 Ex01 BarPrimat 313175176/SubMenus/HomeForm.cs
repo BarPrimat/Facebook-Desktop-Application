@@ -38,7 +38,12 @@ namespace Ex01.DesktopGUI
             }
         }
 
-        private void loginButton_Click(object sender, EventArgs e)
+        private void loginOrLogoutButton_Click(object sender, EventArgs e)
+        {
+            fetchLoginOrLogout();
+        }
+
+        private void fetchLoginOrLogout()
         {
             bool needToEnable = false;
             try
@@ -56,8 +61,8 @@ namespace Ex01.DesktopGUI
                 }
                 else
                 {
-                    Session.Logout();
                     clearAllItemsInScreen();
+                    Session.Logout();
                     loginOrLogoutButton.Text = "Login";
                     MessageBox.Show("You are now logged out!");
                     s_IsAlreadyLogIn = false;
@@ -65,7 +70,7 @@ namespace Ex01.DesktopGUI
 
                 enabledOrDisableAllForms(needToEnable);
             }
-            catch(Exception exception)
+            catch (Exception exception)
             {
                 MessageBox.Show(exception.Message);
             }
@@ -84,13 +89,18 @@ namespace Ex01.DesktopGUI
 
         private void enabledOrDisableAllForms(bool i_EnabledAllForms)
         {
-            r_ParentForm.EnabledOrDisableAllForms(i_EnabledAllForms);
+            r_ParentForm.EnabledOrDisableAllFormButtons(i_EnabledAllForms);
             this.friendsLinkLabel.Enabled = i_EnabledAllForms;
             this.lastPostLinkLabel.Enabled = i_EnabledAllForms;
             this.groupsLinkLabel.Enabled = i_EnabledAllForms;
             this.eventLinkLabel.Enabled = i_EnabledAllForms;
             this.statusTextBox.Enabled = i_EnabledAllForms;
             this.checkInLinkLabel.Enabled = i_EnabledAllForms;
+            if(!i_EnabledAllForms)
+            {
+                statusTextBox.Text = "What's on your mind?";
+                postStatusButton.Enabled = i_EnabledAllForms;
+            }
         }
 
         private void setInfo()
@@ -127,7 +137,7 @@ Education: {5}",
 
         private void lastPostLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            fetchLastPost();
+            fetchLastPosts();
         }
 
         private void groupsLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -163,7 +173,7 @@ Education: {5}",
             }
         }
 
-        private void fetchLastPost()
+        private void fetchLastPosts()
         {
             try
             {
@@ -252,12 +262,17 @@ Education: {5}",
         // DEPRECATED function
         private void postStatusButton_Click(object sender, EventArgs e)
         {
+            fetchPostStatus();
+        }
+
+        private void fetchPostStatus()
+        {
             try
             {
                 Session.LoggedInUser.PostStatus(statusTextBox.Text);
                 MessageBox.Show("The Status Posted!");
             }
-            catch(Exception exception)
+            catch (Exception exception)
             {
                 MessageBox.Show(exception.Message);
             }

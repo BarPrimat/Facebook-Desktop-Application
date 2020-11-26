@@ -1,15 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Forms.VisualStyles;
-using Ex01.DesktopGUI;
 using ContentAlignment = System.Drawing.ContentAlignment;
 
 namespace Ex01.DesktopGUI
@@ -140,21 +131,21 @@ namespace Ex01.DesktopGUI
         }
 
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void facebookPictureBox_Click(object sender, EventArgs e)
         {
             homeButton_Click(homeButton, EventArgs.Empty);
-        }
-
-        private void featuresButton_Click(object sender, EventArgs e)
-        {
-            activeButtonAndHideSubMenu(sender, sr_LeftPanelColor);
-            showSubMenu(displaySubPanel);
         }
 
         private void albumButton_Click(object sender, EventArgs e)
         {
             activeButtonAndHideSubMenu(sender, sr_LeftPanelColor);
             openChildForm(new AlbumForm());
+        }
+
+        private void featuresButton_Click(object sender, EventArgs e)
+        {
+            activeButtonAndHideSubMenu(sender, sr_LeftPanelColor);
+            showSubMenu(displaySubPanel);
         }
 
         // Start sub menu of Features button
@@ -176,7 +167,7 @@ namespace Ex01.DesktopGUI
             Application.Exit();
         }
 
-        public void EnabledOrDisableAllForms(bool i_EnabledAllForms)
+        public void EnabledOrDisableAllFormButtons(bool i_EnabledAllForms)
         {
             this.albumButton.Enabled = i_EnabledAllForms;
             this.featuresButton.Enabled = i_EnabledAllForms;

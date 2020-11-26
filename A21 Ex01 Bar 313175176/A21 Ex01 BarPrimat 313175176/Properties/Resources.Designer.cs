@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Ex01.DesktopGUI.Properties {
+namespace DesktopGUI.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Ex01.DesktopGUI.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Ex01.DesktopGUI.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("DesktopGUI.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -57,25 +57,6 @@ namespace Ex01.DesktopGUI.Properties {
             }
             set {
                 resourceCulture = value;
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap home_icon_silhouette {
-            get {
-                object obj = ResourceManager.GetObject("home-icon-silhouette", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Resources\facebook-logo.png.
-        /// </summary>
-        internal static string Resources_facebook_logo_png {
-            get {
-                return ResourceManager.GetString("Resources\\facebook-logo.png", resourceCulture);
             }
         }
     }

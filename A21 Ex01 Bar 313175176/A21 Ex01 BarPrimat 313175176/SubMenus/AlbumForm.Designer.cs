@@ -49,6 +49,8 @@ namespace Ex01.DesktopGUI
             // 
             // albumLinkLabel
             // 
+            this.albumLinkLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.albumLinkLabel.AutoSize = true;
             this.albumLinkLabel.Location = new System.Drawing.Point(12, 22);
             this.albumLinkLabel.Name = "albumLinkLabel";
@@ -61,6 +63,8 @@ namespace Ex01.DesktopGUI
             // 
             // albumListBox
             // 
+            this.albumListBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.albumListBox.FormattingEnabled = true;
             this.albumListBox.HorizontalScrollbar = true;
             this.albumListBox.ItemHeight = 20;
@@ -72,6 +76,8 @@ namespace Ex01.DesktopGUI
             // 
             // simplePictureInAlbumPictureBox1
             // 
+            this.simplePictureInAlbumPictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.simplePictureInAlbumPictureBox1.Location = new System.Drawing.Point(386, 2);
             this.simplePictureInAlbumPictureBox1.Name = "simplePictureInAlbumPictureBox1";
             this.simplePictureInAlbumPictureBox1.Size = new System.Drawing.Size(189, 111);
@@ -81,6 +87,8 @@ namespace Ex01.DesktopGUI
             // 
             // simplePictureInAlbumPictureBox2
             // 
+            this.simplePictureInAlbumPictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.simplePictureInAlbumPictureBox2.Location = new System.Drawing.Point(386, 119);
             this.simplePictureInAlbumPictureBox2.Name = "simplePictureInAlbumPictureBox2";
             this.simplePictureInAlbumPictureBox2.Size = new System.Drawing.Size(189, 111);
@@ -90,6 +98,8 @@ namespace Ex01.DesktopGUI
             // 
             // simplePictureInAlbumPictureBox3
             // 
+            this.simplePictureInAlbumPictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.simplePictureInAlbumPictureBox3.Location = new System.Drawing.Point(629, 2);
             this.simplePictureInAlbumPictureBox3.Name = "simplePictureInAlbumPictureBox3";
             this.simplePictureInAlbumPictureBox3.Size = new System.Drawing.Size(189, 111);
@@ -99,6 +109,8 @@ namespace Ex01.DesktopGUI
             // 
             // simplePictureInAlbumPictureBox4
             // 
+            this.simplePictureInAlbumPictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.simplePictureInAlbumPictureBox4.Location = new System.Drawing.Point(629, 119);
             this.simplePictureInAlbumPictureBox4.Name = "simplePictureInAlbumPictureBox4";
             this.simplePictureInAlbumPictureBox4.Size = new System.Drawing.Size(189, 111);
@@ -108,6 +120,8 @@ namespace Ex01.DesktopGUI
             // 
             // specificPhotoFromAlbumPictureBox
             // 
+            this.specificPhotoFromAlbumPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.specificPhotoFromAlbumPictureBox.Location = new System.Drawing.Point(363, 236);
             this.specificPhotoFromAlbumPictureBox.Name = "specificPhotoFromAlbumPictureBox";
             this.specificPhotoFromAlbumPictureBox.Size = new System.Drawing.Size(455, 232);
@@ -117,6 +131,8 @@ namespace Ex01.DesktopGUI
             // 
             // showAlbumPictureLinkLabel
             // 
+            this.showAlbumPictureLinkLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.showAlbumPictureLinkLabel.AutoSize = true;
             this.showAlbumPictureLinkLabel.Location = new System.Drawing.Point(12, 223);
             this.showAlbumPictureLinkLabel.Name = "showAlbumPictureLinkLabel";
@@ -129,6 +145,8 @@ namespace Ex01.DesktopGUI
             // 
             // pictureInAlbumListBox
             // 
+            this.pictureInAlbumListBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureInAlbumListBox.FormattingEnabled = true;
             this.pictureInAlbumListBox.HorizontalScrollbar = true;
             this.pictureInAlbumListBox.ItemHeight = 20;

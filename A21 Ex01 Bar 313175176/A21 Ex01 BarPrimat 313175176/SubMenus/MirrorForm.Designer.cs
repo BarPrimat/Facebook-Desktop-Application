@@ -30,13 +30,16 @@ namespace Ex01.DesktopGUI
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MirrorForm));
             this.titleLabel = new System.Windows.Forms.Label();
             this.explanationLabel = new System.Windows.Forms.Label();
             this.letsStartButton = new System.Windows.Forms.Button();
             this.whatKnowAboutYouListBox = new System.Windows.Forms.ListBox();
             this.sensitivityOfAnalyzerLabel = new System.Windows.Forms.Label();
             this.sensitivityOfAnalyzerNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.sensitivityOfAnalyzerNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // titleLabel
@@ -116,12 +119,23 @@ namespace Ex01.DesktopGUI
             0,
             0});
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(29, 272);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(216, 196);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 25;
+            this.pictureBox1.TabStop = false;
+            // 
             // MirrorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(830, 480);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.sensitivityOfAnalyzerLabel);
             this.Controls.Add(this.sensitivityOfAnalyzerNumericUpDown);
             this.Controls.Add(this.whatKnowAboutYouListBox);
@@ -132,6 +146,7 @@ namespace Ex01.DesktopGUI
             this.Name = "MirrorForm";
             this.Text = "SpacificVehicleForm";
             ((System.ComponentModel.ISupportInitialize)(this.sensitivityOfAnalyzerNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -145,5 +160,6 @@ namespace Ex01.DesktopGUI
         private System.Windows.Forms.ListBox whatKnowAboutYouListBox;
         private System.Windows.Forms.Label sensitivityOfAnalyzerLabel;
         private System.Windows.Forms.NumericUpDown sensitivityOfAnalyzerNumericUpDown;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

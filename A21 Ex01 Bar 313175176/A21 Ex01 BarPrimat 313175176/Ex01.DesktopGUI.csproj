@@ -72,6 +72,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="SubMenus\AlbumForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,14 +106,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="SubMenus\AlbumForm.resx">
       <DependentUpon>AlbumForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -136,10 +136,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Facebook.dll" />
+    <Content Include="Resources\facebook-like-beer-icon-logo-085B2FDDC2-seeklogo.com.png" />
+    <Content Include="Resources\FacebookIcon.ico" />
+    <Content Include="Resources\facebook_logo_blog.jpg" />
+    <Content Include="Resources\מראה.png" />
+    <Content Include="SubMenus\Facebook.dll" />
     <Content Include="FbGraphApiWrapper.dll" />
     <Content Include="Resources\facebook-logo.png" />
-    <Content Include="Resources\home-icon-silhouette.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Ex01.Logic\Ex01.Logic.csproj">

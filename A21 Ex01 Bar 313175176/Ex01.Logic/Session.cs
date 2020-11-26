@@ -20,8 +20,9 @@ namespace Ex01.Logic
         {
             try
             {
-              //  FacebookWrapper.FacebookService.s_CollectionLimit = 200;
-              //  FacebookWrapper.FacebookService.s_FbApiVersion = 2.8f;
+                // We can disabled the code line below and the CollectionLimit will be around 25-50
+                // FacebookWrapper.FacebookService.s_CollectionLimit = 200;
+
                 if (m_LoginResult == null)
                 {
                     // Owner: design.patterns
@@ -93,7 +94,6 @@ namespace Ex01.Logic
                 throw new Exception(e.Message);
             }
         }
-
 
         public static void Logout()
         {

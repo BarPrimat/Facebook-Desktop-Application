@@ -202,7 +202,7 @@
             this.facebookPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.facebookPictureBox.TabIndex = 3;
             this.facebookPictureBox.TabStop = false;
-            this.facebookPictureBox.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.facebookPictureBox.Click += new System.EventHandler(this.facebookPictureBox_Click);
             // 
             // mainFillPanel
             // 
@@ -210,7 +210,7 @@
             this.mainFillPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainFillPanel.Location = new System.Drawing.Point(250, 0);
             this.mainFillPanel.Name = "mainFillPanel";
-            this.mainFillPanel.Size = new System.Drawing.Size(724, 390);
+            this.mainFillPanel.Size = new System.Drawing.Size(728, 390);
             this.mainFillPanel.TabIndex = 9;
             // 
             // mainDownPanel
@@ -220,7 +220,7 @@
             this.mainDownPanel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.mainDownPanel.Location = new System.Drawing.Point(250, 390);
             this.mainDownPanel.Name = "mainDownPanel";
-            this.mainDownPanel.Size = new System.Drawing.Size(724, 100);
+            this.mainDownPanel.Size = new System.Drawing.Size(728, 100);
             this.mainDownPanel.TabIndex = 8;
             // 
             // MainMenuForm
@@ -228,12 +228,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(974, 490);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ClientSize = new System.Drawing.Size(978, 490);
             this.Controls.Add(this.mainFillPanel);
             this.Controls.Add(this.mainDownPanel);
             this.Controls.Add(this.panelSideMenu);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(1000, 500);
             this.Name = "MainMenuForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

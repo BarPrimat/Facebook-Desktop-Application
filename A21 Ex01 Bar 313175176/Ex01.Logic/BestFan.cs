@@ -9,7 +9,7 @@ namespace Ex01.Logic
         private Dictionary<User, int> m_FriendsScore;
         private const bool k_CreateNewDictionary = true;
 
-        public List<Tuple<User, int>> FindBestFan(int i_NumberBestFanToReturn, int i_ScoreForLikeInPhoto, int i_ScoreForCommentInPhoto, int i_ScoreForLikeInPost, int i_ScoreForCommentInPost)
+        public List<Tuple<User, int>> FindBestFans(int i_NumberBestFanToReturn, int i_ScoreForLikeInPhoto, int i_ScoreForCommentInPhoto, int i_ScoreForLikeInPost, int i_ScoreForCommentInPost)
         {
             List<Tuple<User, int>> listOfBestFan = new List<Tuple<User, int>>();
 

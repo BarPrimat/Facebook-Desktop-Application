@@ -149,11 +149,16 @@ namespace Ex01.DesktopGUI
 
         private void pictureInAlbumListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            displaySelectedPicture();
+        }
+
+        private void displaySelectedPicture()
+        {
             try
             {
                 if (pictureInAlbumListBox.SelectedItems.Count == 1)
                 {
-                    Photo selectedPhoto = m_PhotoFromAlbum[((Tuple<string, string>) pictureInAlbumListBox.SelectedItem)] as Photo;
+                    Photo selectedPhoto = m_PhotoFromAlbum[((Tuple<string, string>)pictureInAlbumListBox.SelectedItem)] as Photo;
                     specificPhotoFromAlbumPictureBox.LoadAsync(selectedPhoto?.PictureNormalURL);
                 }
                 else
