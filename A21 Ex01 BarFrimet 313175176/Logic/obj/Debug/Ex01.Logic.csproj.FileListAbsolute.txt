@@ -1,0 +1,16 @@
+D:\idc\Year 4\Design Patterns\שיעורי בית\Ex01\A21 Ex01 BarFrimet 313175176\Logic\obj\Debug\Ex01.Logic.csprojAssemblyReference.cache
+D:\idc\Year 4\Design Patterns\שיעורי בית\Ex01\A21 Ex01 BarFrimet 313175176\Logic\obj\Debug\Ex01.Logic.csproj.CoreCompileInputs.cache
+D:\idc\Year 4\Design Patterns\שיעורי בית\Ex01\A21 Ex01 BarFrimet 313175176\Logic\bin\Debug\Ex01.Logic.dll
+D:\idc\Year 4\Design Patterns\שיעורי בית\Ex01\A21 Ex01 BarFrimet 313175176\Logic\bin\Debug\Ex01.Logic.pdb
+D:\idc\Year 4\Design Patterns\שיעורי בית\Ex01\A21 Ex01 BarFrimet 313175176\Logic\bin\Debug\Facebook.dll
+D:\idc\Year 4\Design Patterns\שיעורי בית\Ex01\A21 Ex01 BarFrimet 313175176\Logic\bin\Debug\FbGraphApiWrapper.dll
+D:\idc\Year 4\Design Patterns\שיעורי בית\Ex01\A21 Ex01 BarFrimet 313175176\Logic\obj\Debug\Ex01.Logic.csproj.CopyComplete
+D:\idc\Year 4\Design Patterns\שיעורי בית\Ex01\A21 Ex01 BarFrimet 313175176\Logic\obj\Debug\Ex01.Logic.dll
+D:\idc\Year 4\Design Patterns\שיעורי בית\Ex01\A21 Ex01 BarFrimet 313175176\Logic\obj\Debug\Ex01.Logic.pdb
+C:\Users\Bar\Documents\GitHub\Facebook-Desktop-Application\A21 Ex01 BarFrimet 313175176\Logic\obj\Debug\Ex01.Logic.csprojAssemblyReference.cache
+C:\Users\Bar\Documents\GitHub\Facebook-Desktop-Application\A21 Ex01 BarFrimet 313175176\Logic\obj\Debug\Ex01.Logic.csproj.CoreCompileInputs.cache
+C:\Users\Bar\Documents\GitHub\Facebook-Desktop-Application\A21 Ex01 BarFrimet 313175176\Logic\obj\Debug\Ex01.Logic.dll
+C:\Users\Bar\Documents\GitHub\Facebook-Desktop-Application\A21 Ex01 BarFrimet 313175176\Logic\obj\Debug\Ex01.Logic.pdb
+C:\Users\Bar\Documents\GitHub\Facebook-Desktop-Application\A21 Ex01 BarFrimet 313175176\Logic\bin\Debug\Ex01.Logic.dll
+C:\Users\Bar\Documents\GitHub\Facebook-Desktop-Application\A21 Ex01 BarFrimet 313175176\Logic\bin\Debug\Ex01.Logic.pdb
+C:\Users\Bar\Documents\GitHub\Facebook-Desktop-Application\A21 Ex01 BarFrimet 313175176\Logic\obj\Debug\Ex01.Logic.csproj.CopyComplete

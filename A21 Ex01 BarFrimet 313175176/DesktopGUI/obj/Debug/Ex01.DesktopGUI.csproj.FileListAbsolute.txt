@@ -1,0 +1,37 @@
+D:\idc\Year 4\Design Patterns\שיעורי בית\Ex01\A21 Ex01 BarFrimet 313175176\DesktopGUI\obj\Debug\Ex01.DesktopGUI.csprojAssemblyReference.cache
+D:\idc\Year 4\Design Patterns\שיעורי בית\Ex01\A21 Ex01 BarFrimet 313175176\DesktopGUI\obj\Debug\Ex01.DesktopGUI.MainMenuForm.resources
+D:\idc\Year 4\Design Patterns\שיעורי בית\Ex01\A21 Ex01 BarFrimet 313175176\DesktopGUI\obj\Debug\DesktopGUI.Properties.Resources.resources
+D:\idc\Year 4\Design Patterns\שיעורי בית\Ex01\A21 Ex01 BarFrimet 313175176\DesktopGUI\obj\Debug\Ex01.DesktopGUI.AlbumForm.resources
+D:\idc\Year 4\Design Patterns\שיעורי בית\Ex01\A21 Ex01 BarFrimet 313175176\DesktopGUI\obj\Debug\Ex01.DesktopGUI.BestFanForm.resources
+D:\idc\Year 4\Design Patterns\שיעורי בית\Ex01\A21 Ex01 BarFrimet 313175176\DesktopGUI\obj\Debug\Ex01.DesktopGUI.MirrorForm.resources
+D:\idc\Year 4\Design Patterns\שיעורי בית\Ex01\A21 Ex01 BarFrimet 313175176\DesktopGUI\obj\Debug\Ex01.DesktopGUI.HomeForm.resources
+D:\idc\Year 4\Design Patterns\שיעורי בית\Ex01\A21 Ex01 BarFrimet 313175176\DesktopGUI\obj\Debug\Ex01.DesktopGUI.csproj.GenerateResource.cache
+D:\idc\Year 4\Design Patterns\שיעורי בית\Ex01\A21 Ex01 BarFrimet 313175176\DesktopGUI\obj\Debug\Ex01.DesktopGUI.csproj.CoreCompileInputs.cache
+D:\idc\Year 4\Design Patterns\שיעורי בית\Ex01\A21 Ex01 BarFrimet 313175176\DesktopGUI\bin\Debug\DesktopGUI.exe.config
+D:\idc\Year 4\Design Patterns\שיעורי בית\Ex01\A21 Ex01 BarFrimet 313175176\DesktopGUI\bin\Debug\DesktopGUI.exe
+D:\idc\Year 4\Design Patterns\שיעורי בית\Ex01\A21 Ex01 BarFrimet 313175176\DesktopGUI\bin\Debug\DesktopGUI.pdb
+D:\idc\Year 4\Design Patterns\שיעורי בית\Ex01\A21 Ex01 BarFrimet 313175176\DesktopGUI\bin\Debug\Ex01.Logic.dll
+D:\idc\Year 4\Design Patterns\שיעורי בית\Ex01\A21 Ex01 BarFrimet 313175176\DesktopGUI\bin\Debug\Facebook.dll
+D:\idc\Year 4\Design Patterns\שיעורי בית\Ex01\A21 Ex01 BarFrimet 313175176\DesktopGUI\bin\Debug\FbGraphApiWrapper.dll
+D:\idc\Year 4\Design Patterns\שיעורי בית\Ex01\A21 Ex01 BarFrimet 313175176\DesktopGUI\bin\Debug\Ex01.Logic.pdb
+D:\idc\Year 4\Design Patterns\שיעורי בית\Ex01\A21 Ex01 BarFrimet 313175176\DesktopGUI\obj\Debug\Ex01.DesktopGUI.csproj.CopyComplete
+D:\idc\Year 4\Design Patterns\שיעורי בית\Ex01\A21 Ex01 BarFrimet 313175176\DesktopGUI\obj\Debug\DesktopGUI.exe
+D:\idc\Year 4\Design Patterns\שיעורי בית\Ex01\A21 Ex01 BarFrimet 313175176\DesktopGUI\obj\Debug\DesktopGUI.pdb
+C:\Users\Bar\Documents\GitHub\Facebook-Desktop-Application\A21 Ex01 BarFrimet 313175176\DesktopGUI\bin\Debug\DesktopGUI.exe.config
+C:\Users\Bar\Documents\GitHub\Facebook-Desktop-Application\A21 Ex01 BarFrimet 313175176\DesktopGUI\bin\Debug\DesktopGUI.exe
+C:\Users\Bar\Documents\GitHub\Facebook-Desktop-Application\A21 Ex01 BarFrimet 313175176\DesktopGUI\bin\Debug\DesktopGUI.pdb
+C:\Users\Bar\Documents\GitHub\Facebook-Desktop-Application\A21 Ex01 BarFrimet 313175176\DesktopGUI\bin\Debug\Ex01.Logic.dll
+C:\Users\Bar\Documents\GitHub\Facebook-Desktop-Application\A21 Ex01 BarFrimet 313175176\DesktopGUI\bin\Debug\Ex01.Logic.pdb
+C:\Users\Bar\Documents\GitHub\Facebook-Desktop-Application\A21 Ex01 BarFrimet 313175176\DesktopGUI\obj\Debug\Ex01.DesktopGUI.MainMenuForm.resources
+C:\Users\Bar\Documents\GitHub\Facebook-Desktop-Application\A21 Ex01 BarFrimet 313175176\DesktopGUI\obj\Debug\DesktopGUI.Properties.Resources.resources
+C:\Users\Bar\Documents\GitHub\Facebook-Desktop-Application\A21 Ex01 BarFrimet 313175176\DesktopGUI\obj\Debug\Ex01.DesktopGUI.AlbumForm.resources
+C:\Users\Bar\Documents\GitHub\Facebook-Desktop-Application\A21 Ex01 BarFrimet 313175176\DesktopGUI\obj\Debug\Ex01.DesktopGUI.BestFanForm.resources
+C:\Users\Bar\Documents\GitHub\Facebook-Desktop-Application\A21 Ex01 BarFrimet 313175176\DesktopGUI\obj\Debug\Ex01.DesktopGUI.MirrorForm.resources
+C:\Users\Bar\Documents\GitHub\Facebook-Desktop-Application\A21 Ex01 BarFrimet 313175176\DesktopGUI\obj\Debug\Ex01.DesktopGUI.HomeForm.resources
+C:\Users\Bar\Documents\GitHub\Facebook-Desktop-Application\A21 Ex01 BarFrimet 313175176\DesktopGUI\obj\Debug\Ex01.DesktopGUI.csproj.GenerateResource.cache
+C:\Users\Bar\Documents\GitHub\Facebook-Desktop-Application\A21 Ex01 BarFrimet 313175176\DesktopGUI\obj\Debug\Ex01.DesktopGUI.csproj.CoreCompileInputs.cache
+C:\Users\Bar\Documents\GitHub\Facebook-Desktop-Application\A21 Ex01 BarFrimet 313175176\DesktopGUI\obj\Debug\Ex01.DesktopGUI.csproj.CopyComplete
+C:\Users\Bar\Documents\GitHub\Facebook-Desktop-Application\A21 Ex01 BarFrimet 313175176\DesktopGUI\obj\Debug\DesktopGUI.exe
+C:\Users\Bar\Documents\GitHub\Facebook-Desktop-Application\A21 Ex01 BarFrimet 313175176\DesktopGUI\obj\Debug\DesktopGUI.pdb
+C:\Users\Bar\Documents\GitHub\Facebook-Desktop-Application\A21 Ex01 BarFrimet 313175176\DesktopGUI\obj\Debug\Ex01.DesktopGUI.csprojAssemblyReference.cache
+C:\Users\Bar\Documents\GitHub\Facebook-Desktop-Application\A21 Ex01 BarFrimet 313175176\DesktopGUI\obj\Debug\DesktopGUI.LoginForm.resources
