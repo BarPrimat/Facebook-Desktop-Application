@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using DesktopGUI;
 using ContentAlignment = System.Drawing.ContentAlignment;
 
 namespace Ex01.DesktopGUI
 {
-    public sealed partial class MainMenuForm : Form
+    public sealed partial class MainMenuForm : Form, IFeaturesControls
     {
         private static readonly Size sr_SizeOfSelectSubPanel = new Size(7, 60);
         private static readonly Color sr_LeftPanelColor = Color.Aquamarine;
@@ -27,6 +28,8 @@ namespace Ex01.DesktopGUI
             r_LeftBorderPanelForSubButton.Size = sr_SizeOfSelectSubPanel;
             panelSideMenu.Controls.Add(r_LeftBorderPanelForButton);
             displaySubPanel.Controls.Add(r_LeftBorderPanelForSubButton);
+            // Create all features buttons on the panel (The number of buttons depends on the number of features that exist)
+            FeaturesFormFactoryMethod.CreateFeaturesButtonsOnPanel(this, displaySubPanel);
             initFirstMenu();
         }
 
@@ -44,7 +47,14 @@ namespace Ex01.DesktopGUI
                 m_CurrentButton.ForeColor = i_Color;
                 m_CurrentButton.TextAlign = ContentAlignment.MiddleCenter;
                 // Left border
-                if(!displaySubPanel.Visible)
+                if (displaySubPanel.Visible)
+                {
+                    r_LeftBorderPanelForSubButton.BackColor = i_Color;
+                    r_LeftBorderPanelForSubButton.Location = new Point(0, m_CurrentButton.Location.Y);
+                    r_LeftBorderPanelForSubButton.Visible = true;
+                    r_LeftBorderPanelForSubButton.BringToFront();
+                }
+                else
                 {
                     r_LeftBorderPanelForButton.BackColor = i_Color;
                     r_LeftBorderPanelForButton.Location = new Point(0, m_CurrentButton.Location.Y);
@@ -142,17 +152,15 @@ namespace Ex01.DesktopGUI
         }
 
         // Start sub menu of Features button
-        private void bestFanButton_Click(object sender, EventArgs e)
+        public void SomeFeaturesButton_Click(object sender, EventArgs e)
         {
+            Button currentBottom = sender as Button;
+            Form newForm = FeaturesFormFactoryMethod.CreateFeatureForm(currentBottom.Name);
+
             activateButton(sender, sr_LeftSubPanelColor);
-            openChildForm(new BestFanForm());
+            openChildForm(newForm);
         }
 
-        private void mirrorButton_Click(object sender, EventArgs e)
-        {
-            activateButton(sender, sr_LeftSubPanelColor);
-            openChildForm(new MirrorForm());
-        }
         // End sub menu of Features button
 
         private void exitButton_Click(object sender, EventArgs e)

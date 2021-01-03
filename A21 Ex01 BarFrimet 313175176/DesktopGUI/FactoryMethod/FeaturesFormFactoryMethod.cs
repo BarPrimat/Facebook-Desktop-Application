@@ -1,0 +1,72 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using Ex01.DesktopGUI;
+using FacebookWrapper.ObjectModel;
+
+namespace Ex01.DesktopGUI
+{
+    public class FeaturesFormFactoryMethod
+    {
+        private const int k_HeightOfButton = 60;
+        private static readonly HashSet<string> sr_FeatureFormSet = new HashSet<string>() { "The Mirror", "The Best Fan" };
+
+        public static HashSet<string> FeatureFormSet => sr_FeatureFormSet;
+
+        public static Form CreateFeatureForm(string i_FeatureFormToCreate)
+        {
+            Form formToCreate = new Form();
+
+            if(sr_FeatureFormSet.Contains(i_FeatureFormToCreate))
+            {
+                switch (i_FeatureFormToCreate)
+                {
+                    case "The Best Fan":
+                        formToCreate = new BestFanForm();
+                        break;
+                    case "The Mirror":
+                        formToCreate = new MirrorForm();
+                        break;
+                }
+            }
+            else
+            {
+                throw new Exception("There is no feature form in this name");
+            }
+
+            return formToCreate;
+        }
+
+        public static void CreateFeaturesButtonsOnPanel(IFeaturesControls i_FeaturesControls, Panel i_DisplaySubPanel)
+        {
+            int counter = 1;
+
+            i_DisplaySubPanel.Size = new System.Drawing.Size(250, sr_FeatureFormSet.Count * k_HeightOfButton);
+            foreach (string formName in FeaturesFormFactoryMethod.FeatureFormSet)
+            {
+                Button newButton = new Button();
+                // Details button start
+                newButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+                newButton.Dock = System.Windows.Forms.DockStyle.Top;
+                newButton.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
+                newButton.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlDarkDark;
+                newButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+                newButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
+                newButton.Location = new System.Drawing.Point(0, counter * k_HeightOfButton);
+                newButton.Name = formName;
+                newButton.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+                newButton.Size = new System.Drawing.Size(250, 60);
+                newButton.TabIndex = 8;
+                newButton.Text = formName;
+                newButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+                newButton.UseVisualStyleBackColor = true;
+                i_DisplaySubPanel.Controls.Add(newButton);
+                // Details button end
+                // Add new event on click
+                newButton.Click += new System.EventHandler(i_FeaturesControls.SomeFeaturesButton_Click);
+            }
+        }
+    }
+}

@@ -32,8 +32,6 @@
             this.panelSideMenu = new System.Windows.Forms.Panel();
             this.exitButton = new System.Windows.Forms.Button();
             this.displaySubPanel = new System.Windows.Forms.Panel();
-            this.mirrorButton = new System.Windows.Forms.Button();
-            this.bestFanButton = new System.Windows.Forms.Button();
             this.featuresButton = new System.Windows.Forms.Button();
             this.albumButton = new System.Windows.Forms.Button();
             this.homeButton = new System.Windows.Forms.Button();
@@ -42,7 +40,6 @@
             this.mainFillPanel = new System.Windows.Forms.Panel();
             this.mainDownPanel = new System.Windows.Forms.Panel();
             this.panelSideMenu.SuspendLayout();
-            this.displaySubPanel.SuspendLayout();
             this.logoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.facebookPictureBox)).BeginInit();
             this.SuspendLayout();
@@ -71,7 +68,7 @@
             this.exitButton.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.exitButton.Location = new System.Drawing.Point(0, 400);
+            this.exitButton.Location = new System.Drawing.Point(0, 280);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(250, 60);
             this.exitButton.TabIndex = 5;
@@ -83,49 +80,11 @@
             // displaySubPanel
             // 
             this.displaySubPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(179)))), ((int)(((byte)(201)))));
-            this.displaySubPanel.Controls.Add(this.mirrorButton);
-            this.displaySubPanel.Controls.Add(this.bestFanButton);
             this.displaySubPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.displaySubPanel.Location = new System.Drawing.Point(0, 280);
             this.displaySubPanel.Name = "displaySubPanel";
-            this.displaySubPanel.Size = new System.Drawing.Size(250, 120);
+            this.displaySubPanel.Size = new System.Drawing.Size(250, 0);
             this.displaySubPanel.TabIndex = 4;
-            // 
-            // mirrorButton
-            // 
-            this.mirrorButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.mirrorButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.mirrorButton.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
-            this.mirrorButton.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.mirrorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.mirrorButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.mirrorButton.Location = new System.Drawing.Point(0, 60);
-            this.mirrorButton.Name = "mirrorButton";
-            this.mirrorButton.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.mirrorButton.Size = new System.Drawing.Size(250, 60);
-            this.mirrorButton.TabIndex = 9;
-            this.mirrorButton.Text = "The Mirror";
-            this.mirrorButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.mirrorButton.UseVisualStyleBackColor = true;
-            this.mirrorButton.Click += new System.EventHandler(this.mirrorButton_Click);
-            // 
-            // bestFanButton
-            // 
-            this.bestFanButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.bestFanButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bestFanButton.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
-            this.bestFanButton.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.bestFanButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bestFanButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.bestFanButton.Location = new System.Drawing.Point(0, 0);
-            this.bestFanButton.Name = "bestFanButton";
-            this.bestFanButton.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.bestFanButton.Size = new System.Drawing.Size(250, 60);
-            this.bestFanButton.TabIndex = 8;
-            this.bestFanButton.Text = "The Best Fan";
-            this.bestFanButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bestFanButton.UseVisualStyleBackColor = true;
-            this.bestFanButton.Click += new System.EventHandler(this.bestFanButton_Click);
             // 
             // featuresButton
             // 
@@ -240,7 +199,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Facebook Desktop App";
             this.panelSideMenu.ResumeLayout(false);
-            this.displaySubPanel.ResumeLayout(false);
             this.logoPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.facebookPictureBox)).EndInit();
             this.ResumeLayout(false);
@@ -259,8 +217,6 @@
         private System.Windows.Forms.Button featuresButton;
         private System.Windows.Forms.Button albumButton;
         private System.Windows.Forms.Button exitButton;
-        private System.Windows.Forms.Button mirrorButton;
-        private System.Windows.Forms.Button bestFanButton;
     }
 }
 

@@ -64,6 +64,8 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FactoryMethod\FeaturesFormFactoryMethod.cs" />
+    <Compile Include="FactoryMethod\IFeaturesControls.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,10 +154,11 @@
     <Content Include="Resources\facebook-logo.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Logic\Ex01.Logic.csproj">
+    <ProjectReference Include="..\Logic\Ex02.Logic.csproj">
       <Project>{2f9575ab-bd71-4202-b6d4-748cd09c8977}</Project>
-      <Name>Ex01.Logic</Name>
+      <Name>Ex02.Logic</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
