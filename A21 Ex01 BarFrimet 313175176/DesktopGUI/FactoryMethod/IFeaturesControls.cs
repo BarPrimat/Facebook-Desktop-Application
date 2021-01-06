@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Ex01.DesktopGUI
+namespace Ex02.DesktopGUI
 {
     public interface IFeaturesControls
     {

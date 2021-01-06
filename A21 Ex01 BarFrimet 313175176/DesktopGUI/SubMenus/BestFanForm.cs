@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using Ex01.Logic;
+using Ex02.Logic;
 using FacebookWrapper.ObjectModel;
 
-namespace Ex01.DesktopGUI
+namespace Ex02.DesktopGUI
 {
     public partial class BestFanForm : Form
     {

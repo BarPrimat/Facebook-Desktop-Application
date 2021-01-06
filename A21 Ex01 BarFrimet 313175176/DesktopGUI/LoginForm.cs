@@ -6,8 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using Ex01.DesktopGUI;
-using Ex01.Logic;
+using Ex02.DesktopGUI;
+using Ex02.Logic;
 
 namespace DesktopGUI
 {

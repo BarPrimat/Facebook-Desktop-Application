@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using FacebookWrapper.ObjectModel;
 
-namespace Ex01.Logic.facade
+namespace Ex02.Logic.facade
 {
     public class PostAnalyzer
     {

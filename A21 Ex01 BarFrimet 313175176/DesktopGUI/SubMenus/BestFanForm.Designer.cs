@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace Ex01.DesktopGUI
+namespace Ex02.DesktopGUI
 {
     partial class BestFanForm
     {

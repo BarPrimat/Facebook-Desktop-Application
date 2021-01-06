@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using Ex01.DesktopGUI;
-using FacebookWrapper.ObjectModel;
 
-namespace Ex01.DesktopGUI
+namespace Ex02.DesktopGUI
 {
     public class FeaturesFormFactoryMethod
     {
@@ -44,7 +42,7 @@ namespace Ex01.DesktopGUI
             int counter = 1;
 
             i_DisplaySubPanel.Size = new System.Drawing.Size(250, sr_FeatureFormSet.Count * k_HeightOfButton);
-            foreach (string formName in FeaturesFormFactoryMethod.FeatureFormSet)
+            foreach (string formName in sr_FeatureFormSet)
             {
                 Button newButton = new Button();
                 // Details button start

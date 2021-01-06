@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using Ex01.Logic.facade;
+using Ex02.Logic.facade;
 using FacebookWrapper.ObjectModel;
 
-namespace Ex01.Logic
+namespace Ex02.Logic
 {
     public class PersonalityAnalyzer
     {

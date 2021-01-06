@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace Ex01.DesktopGUI
+namespace Ex02.DesktopGUI
 {
     partial class HomeForm
     {
@@ -70,9 +70,10 @@ namespace Ex01.DesktopGUI
             // 
             birthdayLabel.AutoSize = true;
             birthdayLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            birthdayLabel.Location = new System.Drawing.Point(305, 35);
+            birthdayLabel.Location = new System.Drawing.Point(458, 54);
+            birthdayLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             birthdayLabel.Name = "birthdayLabel";
-            birthdayLabel.Size = new System.Drawing.Size(48, 13);
+            birthdayLabel.Size = new System.Drawing.Size(71, 20);
             birthdayLabel.TabIndex = 25;
             birthdayLabel.Text = "Birthday:";
             // 
@@ -80,9 +81,10 @@ namespace Ex01.DesktopGUI
             // 
             emailLabel.AutoSize = true;
             emailLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            emailLabel.Location = new System.Drawing.Point(305, 58);
+            emailLabel.Location = new System.Drawing.Point(458, 89);
+            emailLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             emailLabel.Name = "emailLabel";
-            emailLabel.Size = new System.Drawing.Size(35, 13);
+            emailLabel.Size = new System.Drawing.Size(52, 20);
             emailLabel.TabIndex = 27;
             emailLabel.Text = "Email:";
             // 
@@ -90,9 +92,10 @@ namespace Ex01.DesktopGUI
             // 
             localeLabel.AutoSize = true;
             localeLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            localeLabel.Location = new System.Drawing.Point(305, 81);
+            localeLabel.Location = new System.Drawing.Point(458, 125);
+            localeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             localeLabel.Name = "localeLabel";
-            localeLabel.Size = new System.Drawing.Size(42, 13);
+            localeLabel.Size = new System.Drawing.Size(60, 20);
             localeLabel.TabIndex = 29;
             localeLabel.Text = "Locale:";
             // 
@@ -100,9 +103,10 @@ namespace Ex01.DesktopGUI
             // 
             nameLabel.AutoSize = true;
             nameLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            nameLabel.Location = new System.Drawing.Point(305, 12);
+            nameLabel.Location = new System.Drawing.Point(458, 18);
+            nameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             nameLabel.Name = "nameLabel";
-            nameLabel.Size = new System.Drawing.Size(38, 13);
+            nameLabel.Size = new System.Drawing.Size(55, 20);
             nameLabel.TabIndex = 31;
             nameLabel.Text = "Name:";
             // 
@@ -111,10 +115,9 @@ namespace Ex01.DesktopGUI
             this.userPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.userPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.userPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("userPictureBox.Image")));
-            this.userPictureBox.Location = new System.Drawing.Point(8, 8);
-            this.userPictureBox.Margin = new System.Windows.Forms.Padding(2);
+            this.userPictureBox.Location = new System.Drawing.Point(12, 12);
             this.userPictureBox.Name = "userPictureBox";
-            this.userPictureBox.Size = new System.Drawing.Size(88, 92);
+            this.userPictureBox.Size = new System.Drawing.Size(132, 142);
             this.userPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.userPictureBox.TabIndex = 4;
             this.userPictureBox.TabStop = false;
@@ -129,10 +132,9 @@ namespace Ex01.DesktopGUI
             this.logoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.logoutButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.logoutButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.logoutButton.Location = new System.Drawing.Point(108, 8);
-            this.logoutButton.Margin = new System.Windows.Forms.Padding(2);
+            this.logoutButton.Location = new System.Drawing.Point(162, 12);
             this.logoutButton.Name = "logoutButton";
-            this.logoutButton.Size = new System.Drawing.Size(56, 29);
+            this.logoutButton.Size = new System.Drawing.Size(84, 45);
             this.logoutButton.TabIndex = 5;
             this.logoutButton.Text = "Logout";
             this.logoutButton.UseVisualStyleBackColor = true;
@@ -142,10 +144,9 @@ namespace Ex01.DesktopGUI
             // 
             this.infoLabel.AutoSize = true;
             this.infoLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.infoLabel.Location = new System.Drawing.Point(263, 12);
-            this.infoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.infoLabel.Location = new System.Drawing.Point(394, 18);
             this.infoLabel.Name = "infoLabel";
-            this.infoLabel.Size = new System.Drawing.Size(25, 13);
+            this.infoLabel.Size = new System.Drawing.Size(37, 20);
             this.infoLabel.TabIndex = 8;
             this.infoLabel.Text = "Info";
             // 
@@ -153,10 +154,9 @@ namespace Ex01.DesktopGUI
             // 
             this.welcomeLabel.AutoSize = true;
             this.welcomeLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.welcomeLabel.Location = new System.Drawing.Point(108, 45);
-            this.welcomeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.welcomeLabel.Location = new System.Drawing.Point(162, 69);
             this.welcomeLabel.Name = "welcomeLabel";
-            this.welcomeLabel.Size = new System.Drawing.Size(98, 13);
+            this.welcomeLabel.Size = new System.Drawing.Size(144, 20);
             this.welcomeLabel.TabIndex = 6;
             this.welcomeLabel.Text = "Welcome Message";
             this.welcomeLabel.Visible = false;
@@ -165,20 +165,19 @@ namespace Ex01.DesktopGUI
             // 
             this.friendsListBox.FormattingEnabled = true;
             this.friendsListBox.HorizontalScrollbar = true;
-            this.friendsListBox.Location = new System.Drawing.Point(198, 122);
-            this.friendsListBox.Margin = new System.Windows.Forms.Padding(2);
+            this.friendsListBox.ItemHeight = 20;
+            this.friendsListBox.Location = new System.Drawing.Point(297, 188);
             this.friendsListBox.Name = "friendsListBox";
-            this.friendsListBox.Size = new System.Drawing.Size(172, 82);
+            this.friendsListBox.Size = new System.Drawing.Size(256, 124);
             this.friendsListBox.TabIndex = 7;
             // 
             // friendsLinkLabel
             // 
             this.friendsLinkLabel.AutoSize = true;
-            this.friendsLinkLabel.Location = new System.Drawing.Point(195, 107);
-            this.friendsLinkLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.friendsLinkLabel.Location = new System.Drawing.Point(292, 165);
             this.friendsLinkLabel.Name = "friendsLinkLabel";
             this.friendsLinkLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.friendsLinkLabel.Size = new System.Drawing.Size(71, 13);
+            this.friendsLinkLabel.Size = new System.Drawing.Size(106, 20);
             this.friendsLinkLabel.TabIndex = 10;
             this.friendsLinkLabel.TabStop = true;
             this.friendsLinkLabel.Text = "Show Friends";
@@ -187,11 +186,10 @@ namespace Ex01.DesktopGUI
             // groupsLinkLabel
             // 
             this.groupsLinkLabel.AutoSize = true;
-            this.groupsLinkLabel.Location = new System.Drawing.Point(195, 209);
-            this.groupsLinkLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.groupsLinkLabel.Location = new System.Drawing.Point(292, 322);
             this.groupsLinkLabel.Name = "groupsLinkLabel";
             this.groupsLinkLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.groupsLinkLabel.Size = new System.Drawing.Size(71, 13);
+            this.groupsLinkLabel.Size = new System.Drawing.Size(106, 20);
             this.groupsLinkLabel.TabIndex = 12;
             this.groupsLinkLabel.TabStop = true;
             this.groupsLinkLabel.Text = "Show Groups";
@@ -201,20 +199,19 @@ namespace Ex01.DesktopGUI
             // 
             this.groupsListBox.FormattingEnabled = true;
             this.groupsListBox.HorizontalScrollbar = true;
-            this.groupsListBox.Location = new System.Drawing.Point(195, 224);
-            this.groupsListBox.Margin = new System.Windows.Forms.Padding(2);
+            this.groupsListBox.ItemHeight = 20;
+            this.groupsListBox.Location = new System.Drawing.Point(292, 345);
             this.groupsListBox.Name = "groupsListBox";
-            this.groupsListBox.Size = new System.Drawing.Size(175, 82);
+            this.groupsListBox.Size = new System.Drawing.Size(260, 124);
             this.groupsListBox.TabIndex = 11;
             // 
             // lastPostLinkLabel
             // 
             this.lastPostLinkLabel.AutoSize = true;
-            this.lastPostLinkLabel.Location = new System.Drawing.Point(8, 209);
-            this.lastPostLinkLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lastPostLinkLabel.Location = new System.Drawing.Point(12, 322);
             this.lastPostLinkLabel.Name = "lastPostLinkLabel";
             this.lastPostLinkLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lastPostLinkLabel.Size = new System.Drawing.Size(86, 13);
+            this.lastPostLinkLabel.Size = new System.Drawing.Size(128, 20);
             this.lastPostLinkLabel.TabIndex = 14;
             this.lastPostLinkLabel.TabStop = true;
             this.lastPostLinkLabel.Text = "Show Last Posts";
@@ -223,11 +220,10 @@ namespace Ex01.DesktopGUI
             // eventLinkLabel
             // 
             this.eventLinkLabel.AutoSize = true;
-            this.eventLinkLabel.Location = new System.Drawing.Point(376, 107);
-            this.eventLinkLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.eventLinkLabel.Location = new System.Drawing.Point(564, 165);
             this.eventLinkLabel.Name = "eventLinkLabel";
             this.eventLinkLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.eventLinkLabel.Size = new System.Drawing.Size(65, 13);
+            this.eventLinkLabel.Size = new System.Drawing.Size(94, 20);
             this.eventLinkLabel.TabIndex = 16;
             this.eventLinkLabel.TabStop = true;
             this.eventLinkLabel.Text = "Show Event";
@@ -237,30 +233,29 @@ namespace Ex01.DesktopGUI
             // 
             this.eventListBox.FormattingEnabled = true;
             this.eventListBox.HorizontalScrollbar = true;
-            this.eventListBox.Location = new System.Drawing.Point(379, 122);
-            this.eventListBox.Margin = new System.Windows.Forms.Padding(2);
+            this.eventListBox.ItemHeight = 20;
+            this.eventListBox.Location = new System.Drawing.Point(568, 188);
             this.eventListBox.Name = "eventListBox";
-            this.eventListBox.Size = new System.Drawing.Size(175, 82);
+            this.eventListBox.Size = new System.Drawing.Size(260, 124);
             this.eventListBox.TabIndex = 15;
             // 
             // lastPostListBox
             // 
             this.lastPostListBox.FormattingEnabled = true;
             this.lastPostListBox.HorizontalScrollbar = true;
-            this.lastPostListBox.Location = new System.Drawing.Point(11, 224);
-            this.lastPostListBox.Margin = new System.Windows.Forms.Padding(2);
+            this.lastPostListBox.ItemHeight = 20;
+            this.lastPostListBox.Location = new System.Drawing.Point(16, 345);
             this.lastPostListBox.Name = "lastPostListBox";
-            this.lastPostListBox.Size = new System.Drawing.Size(175, 82);
+            this.lastPostListBox.Size = new System.Drawing.Size(260, 124);
             this.lastPostListBox.TabIndex = 13;
             // 
             // checkInLinkLabel
             // 
             this.checkInLinkLabel.AutoSize = true;
-            this.checkInLinkLabel.Location = new System.Drawing.Point(376, 209);
-            this.checkInLinkLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.checkInLinkLabel.Location = new System.Drawing.Point(564, 322);
             this.checkInLinkLabel.Name = "checkInLinkLabel";
             this.checkInLinkLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.checkInLinkLabel.Size = new System.Drawing.Size(80, 13);
+            this.checkInLinkLabel.Size = new System.Drawing.Size(116, 20);
             this.checkInLinkLabel.TabIndex = 20;
             this.checkInLinkLabel.TabStop = true;
             this.checkInLinkLabel.Text = "Show Check In";
@@ -270,30 +265,28 @@ namespace Ex01.DesktopGUI
             // 
             this.checkInListBox.FormattingEnabled = true;
             this.checkInListBox.HorizontalScrollbar = true;
-            this.checkInListBox.Location = new System.Drawing.Point(379, 224);
-            this.checkInListBox.Margin = new System.Windows.Forms.Padding(2);
+            this.checkInListBox.ItemHeight = 20;
+            this.checkInListBox.Location = new System.Drawing.Point(568, 345);
             this.checkInListBox.Name = "checkInListBox";
-            this.checkInListBox.Size = new System.Drawing.Size(175, 82);
+            this.checkInListBox.Size = new System.Drawing.Size(260, 124);
             this.checkInListBox.TabIndex = 19;
             // 
             // postStatusLabel
             // 
             this.postStatusLabel.AutoSize = true;
             this.postStatusLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.postStatusLabel.Location = new System.Drawing.Point(8, 107);
-            this.postStatusLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.postStatusLabel.Location = new System.Drawing.Point(12, 165);
             this.postStatusLabel.Name = "postStatusLabel";
-            this.postStatusLabel.Size = new System.Drawing.Size(59, 13);
+            this.postStatusLabel.Size = new System.Drawing.Size(89, 20);
             this.postStatusLabel.TabIndex = 22;
             this.postStatusLabel.Text = "Post status";
             // 
             // postStatusButton
             // 
             this.postStatusButton.Enabled = false;
-            this.postStatusButton.Location = new System.Drawing.Point(134, 181);
-            this.postStatusButton.Margin = new System.Windows.Forms.Padding(2);
+            this.postStatusButton.Location = new System.Drawing.Point(201, 278);
             this.postStatusButton.Name = "postStatusButton";
-            this.postStatusButton.Size = new System.Drawing.Size(50, 21);
+            this.postStatusButton.Size = new System.Drawing.Size(75, 32);
             this.postStatusButton.TabIndex = 24;
             this.postStatusButton.Text = "Post";
             this.postStatusButton.UseVisualStyleBackColor = true;
@@ -302,10 +295,9 @@ namespace Ex01.DesktopGUI
             // statusTextBox
             // 
             this.statusTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.statusTextBox.Location = new System.Drawing.Point(8, 122);
-            this.statusTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.statusTextBox.Location = new System.Drawing.Point(12, 188);
             this.statusTextBox.Name = "statusTextBox";
-            this.statusTextBox.Size = new System.Drawing.Size(177, 82);
+            this.statusTextBox.Size = new System.Drawing.Size(264, 124);
             this.statusTextBox.TabIndex = 23;
             this.statusTextBox.Text = "What\'s on your mind?";
             this.statusTextBox.TextChanged += new System.EventHandler(this.statusTextBox_TextChanged);
@@ -317,49 +309,57 @@ namespace Ex01.DesktopGUI
             // birthdayLabel1
             // 
             this.birthdayLabel1.AutoSize = true;
-            this.birthdayLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userBindingSource, "Birthday", true));
+            this.birthdayLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userBindingSource, "Birthday", true, System.Windows.Forms.DataSourceUpdateMode.Never));
             this.birthdayLabel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.birthdayLabel1.Location = new System.Drawing.Point(359, 35);
+            this.birthdayLabel1.Location = new System.Drawing.Point(539, 54);
+            this.birthdayLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.birthdayLabel1.Name = "birthdayLabel1";
-            this.birthdayLabel1.Size = new System.Drawing.Size(0, 13);
+            this.birthdayLabel1.Size = new System.Drawing.Size(103, 20);
             this.birthdayLabel1.TabIndex = 26;
+            this.birthdayLabel1.Text = "User birthday";
             // 
             // emailLabel1
             // 
             this.emailLabel1.AutoSize = true;
-            this.emailLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userBindingSource, "Email", true));
+            this.emailLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userBindingSource, "Email", true, System.Windows.Forms.DataSourceUpdateMode.Never));
             this.emailLabel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.emailLabel1.Location = new System.Drawing.Point(359, 58);
+            this.emailLabel1.Location = new System.Drawing.Point(538, 89);
+            this.emailLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.emailLabel1.Name = "emailLabel1";
-            this.emailLabel1.Size = new System.Drawing.Size(0, 13);
+            this.emailLabel1.Size = new System.Drawing.Size(86, 20);
             this.emailLabel1.TabIndex = 28;
+            this.emailLabel1.Text = "User Email";
             // 
             // localeLabel1
             // 
             this.localeLabel1.AutoSize = true;
-            this.localeLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userBindingSource, "Locale", true));
+            this.localeLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userBindingSource, "Locale", true, System.Windows.Forms.DataSourceUpdateMode.Never));
             this.localeLabel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.localeLabel1.Location = new System.Drawing.Point(359, 81);
+            this.localeLabel1.Location = new System.Drawing.Point(538, 125);
+            this.localeLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.localeLabel1.Name = "localeLabel1";
-            this.localeLabel1.Size = new System.Drawing.Size(0, 13);
+            this.localeLabel1.Size = new System.Drawing.Size(88, 20);
             this.localeLabel1.TabIndex = 30;
+            this.localeLabel1.Text = "User locale";
             // 
             // nameLabel1
             // 
             this.nameLabel1.AutoSize = true;
-            this.nameLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userBindingSource, "Name", true));
+            this.nameLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userBindingSource, "Name", true, System.Windows.Forms.DataSourceUpdateMode.Never));
             this.nameLabel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.nameLabel1.Location = new System.Drawing.Point(356, 12);
+            this.nameLabel1.Location = new System.Drawing.Point(539, 18);
+            this.nameLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nameLabel1.Name = "nameLabel1";
-            this.nameLabel1.Size = new System.Drawing.Size(0, 13);
+            this.nameLabel1.Size = new System.Drawing.Size(87, 20);
             this.nameLabel1.TabIndex = 32;
+            this.nameLabel1.Text = "User name";
             // 
             // HomeForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(574, 326);
+            this.ClientSize = new System.Drawing.Size(861, 502);
             this.Controls.Add(birthdayLabel);
             this.Controls.Add(this.birthdayLabel1);
             this.Controls.Add(emailLabel);
@@ -386,7 +386,6 @@ namespace Ex01.DesktopGUI
             this.Controls.Add(this.logoutButton);
             this.Controls.Add(this.userPictureBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "HomeForm";
             this.Text = "HomeForm";
             ((System.ComponentModel.ISupportInitialize)(this.userPictureBox)).EndInit();

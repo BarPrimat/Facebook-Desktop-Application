@@ -2,7 +2,7 @@
 using FacebookWrapper;
 using FacebookWrapper.ObjectModel;
 
-namespace Ex01.Logic
+namespace Ex02.Logic
 {
     public sealed class Session
     {

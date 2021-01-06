@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using FacebookWrapper.ObjectModel;
 
-namespace Ex01.Logic.facade
+namespace Ex02.Logic.facade
 {
     public class AnalyzerOperations
     {
-
         public static void FindAndUpdatePatternThatMatch(Dictionary<string, int>  i_PatternAndThereAmountDictionary, string i_TextToTest)
         {
             string textAfterClear = clearStringFromExtensions(i_TextToTest);

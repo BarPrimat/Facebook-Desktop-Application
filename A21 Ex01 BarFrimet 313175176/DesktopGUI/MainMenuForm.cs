@@ -4,7 +4,7 @@ using System.Windows.Forms;
 using DesktopGUI;
 using ContentAlignment = System.Drawing.ContentAlignment;
 
-namespace Ex01.DesktopGUI
+namespace Ex02.DesktopGUI
 {
     public sealed partial class MainMenuForm : Form, IFeaturesControls
     {

@@ -4,9 +4,9 @@ using System.Threading;
 using System.Windows.Forms;
 using DesktopGUI;
 using FacebookWrapper.ObjectModel;
-using Ex01.Logic;
+using Ex02.Logic;
 
-namespace Ex01.DesktopGUI
+namespace Ex02.DesktopGUI
 {
     public partial class HomeForm : Form
     {

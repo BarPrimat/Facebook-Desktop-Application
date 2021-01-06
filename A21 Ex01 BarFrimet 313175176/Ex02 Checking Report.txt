@@ -1,0 +1,10 @@
+==========================Exercise Checking Report==========================
+Exercise No...........: 2
+First Student Details.: 313175176 - Bar Frimet
+Second Student Details:
+Delivery Date.........: 6 - January- 2021
+Delivered In Delay....: No
+Delay Reason..........: <Delay Reason>
+Visual Studio Version.: 2019
+Comments..............: 
+=======================End Exercise Checking Report=========================

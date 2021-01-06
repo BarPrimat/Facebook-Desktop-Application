@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DesktopGUI;
 
-namespace Ex01.DesktopGUI
+namespace Ex02.DesktopGUI
 {
     public static class Program
     {

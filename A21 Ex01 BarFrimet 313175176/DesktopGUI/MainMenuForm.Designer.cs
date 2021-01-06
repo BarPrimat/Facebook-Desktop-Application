@@ -1,4 +1,4 @@
-﻿namespace Ex01.DesktopGUI
+﻿namespace Ex02.DesktopGUI
 {
     sealed partial class MainMenuForm
     {

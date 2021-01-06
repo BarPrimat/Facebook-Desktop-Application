@@ -1,7 +1,7 @@
 ﻿using FacebookWrapper.ObjectModel;
 using System.Collections.Generic;
 
-namespace Ex01.Logic.facade
+namespace Ex02.Logic.facade
 {
     public class PhotoAnalyzer
     {
