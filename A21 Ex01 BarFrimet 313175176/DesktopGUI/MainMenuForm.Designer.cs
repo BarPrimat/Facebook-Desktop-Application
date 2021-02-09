@@ -39,9 +39,11 @@
             this.facebookPictureBox = new System.Windows.Forms.PictureBox();
             this.mainFillPanel = new System.Windows.Forms.Panel();
             this.mainDownPanel = new System.Windows.Forms.Panel();
+            this.nightModeCheckBox = new System.Windows.Forms.CheckBox();
             this.panelSideMenu.SuspendLayout();
             this.logoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.facebookPictureBox)).BeginInit();
+            this.mainDownPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelSideMenu
@@ -173,12 +175,26 @@
             // mainDownPanel
             // 
             this.mainDownPanel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.mainDownPanel.Controls.Add(this.nightModeCheckBox);
             this.mainDownPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.mainDownPanel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.mainDownPanel.Location = new System.Drawing.Point(250, 390);
             this.mainDownPanel.Name = "mainDownPanel";
             this.mainDownPanel.Size = new System.Drawing.Size(728, 100);
             this.mainDownPanel.TabIndex = 8;
+            // 
+            // nightModeCheckBox
+            // 
+            this.nightModeCheckBox.AutoSize = true;
+            this.nightModeCheckBox.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.nightModeCheckBox.Location = new System.Drawing.Point(578, 6);
+            this.nightModeCheckBox.Name = "nightModeCheckBox";
+            this.nightModeCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.nightModeCheckBox.Size = new System.Drawing.Size(138, 29);
+            this.nightModeCheckBox.TabIndex = 0;
+            this.nightModeCheckBox.Text = "Night Mode";
+            this.nightModeCheckBox.UseVisualStyleBackColor = true;
+            this.nightModeCheckBox.CheckedChanged += new System.EventHandler(this.NightModeCheckBox_CheckedChanged);
             // 
             // MainMenuForm
             // 
@@ -201,6 +217,8 @@
             this.panelSideMenu.ResumeLayout(false);
             this.logoPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.facebookPictureBox)).EndInit();
+            this.mainDownPanel.ResumeLayout(false);
+            this.mainDownPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -217,6 +235,7 @@
         private System.Windows.Forms.Button featuresButton;
         private System.Windows.Forms.Button albumButton;
         private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.CheckBox nightModeCheckBox;
     }
 }
 

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 using DesktopGUI;
@@ -11,26 +12,28 @@ namespace Ex02.DesktopGUI
         private static readonly Size sr_SizeOfSelectSubPanel = new Size(7, 60);
         private static readonly Color sr_LeftPanelColor = Color.Aquamarine;
         private static readonly Color sr_LeftSubPanelColor = Color.DodgerBlue;
-        private static readonly Color sr_LeftButtonColorWhenSelected = Color.DarkSlateGray;
+        private static readonly Color sr_PanelAndButtonRegularColor = Color.FromArgb(105, 128, 168);
         private Form m_ActionForm;
         private readonly Panel r_LeftBorderPanelForButton;
         private Button m_CurrentButton;
-        private Color m_LastColorOfCurrentButton;
         private readonly Panel r_LeftBorderPanelForSubButton;
         private bool m_IsFirstOpenForm = true;
+        private ToggleNightMode r_ToggleNightMode;
 
         public MainMenuForm()
         {
             InitializeComponent();
             r_LeftBorderPanelForButton = new Panel();
             r_LeftBorderPanelForSubButton = new Panel();
+            r_ToggleNightMode = new ToggleNightMode();
             r_LeftBorderPanelForButton.Size = sr_SizeOfSelectSubPanel;
             r_LeftBorderPanelForSubButton.Size = sr_SizeOfSelectSubPanel;
             panelSideMenu.Controls.Add(r_LeftBorderPanelForButton);
             displaySubPanel.Controls.Add(r_LeftBorderPanelForSubButton);
             // Create all features buttons on the panel (The number of buttons depends on the number of features that exist)
-            FeaturesFormFactoryMethod.CreateFeaturesButtonsOnPanel(this, displaySubPanel);
+            FeaturesFormFactoryMethod.CreateFeaturesButtonsOnPanel(this, displaySubPanel, r_ToggleNightMode);
             initFirstMenu();
+            r_ToggleNightMode.PropertyChanged += toggleToNightMode;
         }
 
         private void activateButton(object i_Sender, Color i_Color)
@@ -42,14 +45,12 @@ namespace Ex02.DesktopGUI
                 disableButton();
                 m_CurrentButton = newCurrentButton;
                 // Button change
-                m_LastColorOfCurrentButton = m_CurrentButton.BackColor;
-                m_CurrentButton.BackColor = sr_LeftButtonColorWhenSelected;
                 m_CurrentButton.ForeColor = i_Color;
                 m_CurrentButton.TextAlign = ContentAlignment.MiddleCenter;
                 // Left border
                 if (displaySubPanel.Visible)
                 {
-                    r_LeftBorderPanelForSubButton.BackColor = i_Color;
+                    ToggleNightMode.ChangeObjectColor(r_LeftBorderPanelForSubButton, i_Color);
                     r_LeftBorderPanelForSubButton.Location = new Point(0, m_CurrentButton.Location.Y);
                     r_LeftBorderPanelForSubButton.Visible = true;
                     r_LeftBorderPanelForSubButton.BringToFront();
@@ -68,7 +69,6 @@ namespace Ex02.DesktopGUI
         {
             if(m_CurrentButton != null)
             {
-                m_CurrentButton.BackColor = m_LastColorOfCurrentButton;
                 m_CurrentButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
                 m_CurrentButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             }
@@ -130,7 +130,7 @@ namespace Ex02.DesktopGUI
         private void homeButton_Click(object sender, EventArgs e)
         {
             activeButtonAndHideSubMenu(sender, sr_LeftPanelColor);
-            openChildForm(new HomeForm(this));
+            openChildForm(new HomeForm(this, r_ToggleNightMode));
         }
 
 
@@ -142,7 +142,7 @@ namespace Ex02.DesktopGUI
         private void albumButton_Click(object sender, EventArgs e)
         {
             activeButtonAndHideSubMenu(sender, sr_LeftPanelColor);
-            openChildForm(new AlbumForm());
+            openChildForm(new AlbumForm(r_ToggleNightMode));
         }
 
         private void featuresButton_Click(object sender, EventArgs e)
@@ -154,8 +154,8 @@ namespace Ex02.DesktopGUI
         // Start sub menu of Features button
         public void SomeFeaturesButton_Click(object sender, EventArgs e)
         {
-            Button currentBottom = sender as Button;
-            Form newForm = FeaturesFormFactoryMethod.CreateFeatureForm(currentBottom.Name);
+            Button currentButton = sender as Button;
+            Form newForm = FeaturesFormFactoryMethod.CreateFeatureForm(currentButton.Name, r_ToggleNightMode);
 
             activateButton(sender, sr_LeftSubPanelColor);
             openChildForm(newForm);
@@ -168,10 +168,20 @@ namespace Ex02.DesktopGUI
             Application.Exit();
         }
 
-        public void EnabledOrDisableAllFormButtons(bool i_EnabledAllForms)
+        private void toggleToNightMode(object sender, PropertyChangedEventArgs e)
         {
-            this.albumButton.Enabled = i_EnabledAllForms;
-            this.featuresButton.Enabled = i_EnabledAllForms;
+            ToggleNightMode.ChangeObjectColor(panelSideMenu, sr_PanelAndButtonRegularColor);
+            ToggleNightMode.ChangeObjectColor(homeButton, sr_PanelAndButtonRegularColor);
+            ToggleNightMode.ChangeObjectColor(albumButton, sr_PanelAndButtonRegularColor);
+            ToggleNightMode.ChangeObjectColor(featuresButton, sr_PanelAndButtonRegularColor);
+            ToggleNightMode.ChangeObjectColor(exitButton, sr_PanelAndButtonRegularColor);
+            ToggleNightMode.ChangeObjectColor(mainDownPanel, SystemColors.GradientActiveCaption, Color.DarkCyan);
+            ToggleNightMode.ChangeObjectColor(logoPanel, SystemColors.GradientActiveCaption);
+        }
+
+        private void NightModeCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            r_ToggleNightMode.invokeModePropertyChanged();
         }
     }
 }

@@ -124,6 +124,7 @@
     <Compile Include="SubMenus\MirrorForm.Designer.cs">
       <DependentUpon>MirrorForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ToggleNightMode.cs" />
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>

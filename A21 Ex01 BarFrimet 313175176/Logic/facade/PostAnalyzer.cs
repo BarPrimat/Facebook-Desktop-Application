@@ -21,12 +21,18 @@ namespace Ex02.Logic.facade
 
         public void Analyzer()
         {
-            foreach (Post post in r_LoggedInUser.Posts)
+            try
             {
-                if (!string.IsNullOrEmpty(post.Message))
+                foreach (Post post in r_LoggedInUser.Posts)
                 {
-                    AnalyzerOperations.FindAndUpdatePatternThatMatch(r_PatternAndThereAmountDictionary, post.Message);
+                    if (!string.IsNullOrEmpty(post.Message))
+                    {
+                        AnalyzerOperations.FindAndUpdatePatternThatMatch(r_PatternAndThereAmountDictionary, post.Message);
+                    }
                 }
+            }
+            catch(Exception e)
+            {
             }
         }
     }

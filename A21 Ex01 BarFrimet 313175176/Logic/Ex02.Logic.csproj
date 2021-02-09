@@ -39,6 +39,7 @@
     <Compile Include="facade\AnalyzerOperations.cs" />
     <Compile Include="facade\PersonalityAnalyzer.cs" />
     <Compile Include="facade\PhotoAnalyzer.cs" />
+    <Compile Include="facade\PhotoIterator.cs" />
     <Compile Include="facade\PostAnalyzer.cs" />
     <Compile Include="Session.cs" />
     <Compile Include="facade\WordsDatabase.cs" />

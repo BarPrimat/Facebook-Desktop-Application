@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Drawing;
 using System.Windows.Forms;
 using Ex02.Logic;
 using FacebookWrapper.ObjectModel;
@@ -10,11 +12,20 @@ namespace Ex02.DesktopGUI
     {
         private BestFan m_BestFan;
         private const bool k_VisibleObject = true;
+        private static readonly Color sr_ButtonRegularColor = SystemColors.ActiveCaption;
+        private static readonly Color sr_DarkButtonColor = Color.DarkGray;
         private const int k_NumberOfBestFanToShow = 3;
 
-        public BestFanForm()
+        public BestFanForm(ToggleNightMode i_ToggleNightMode)
         {
             InitializeComponent();
+            ToggleNightMode.ChangeObjectColor(this, sr_ButtonRegularColor, sr_DarkButtonColor);
+            i_ToggleNightMode.PropertyChanged += changeViewMode;
+        }
+
+        private void changeViewMode(object sender, PropertyChangedEventArgs e)
+        {
+            ToggleNightMode.ChangeObjectColor(this, sr_ButtonRegularColor, sr_DarkButtonColor);
         }
 
         private void findButton_Click(object sender, EventArgs e)

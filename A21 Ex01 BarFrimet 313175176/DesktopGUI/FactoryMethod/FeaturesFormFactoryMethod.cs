@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -9,23 +11,26 @@ namespace Ex02.DesktopGUI
     public class FeaturesFormFactoryMethod
     {
         private const int k_HeightOfButton = 60;
+        private static readonly Color sr_ButtonRegularColor = Color.FromArgb(105, 128, 168);
+        private static readonly Color sr_DarkButtonColor = Color.DarkGray;
+        private static readonly List<Button> sr_ListButton = new List<Button>();
         private static readonly HashSet<string> sr_FeatureFormSet = new HashSet<string>() { "The Mirror", "The Best Fan" };
 
         public static HashSet<string> FeatureFormSet => sr_FeatureFormSet;
 
-        public static Form CreateFeatureForm(string i_FeatureFormToCreate)
+        public static Form CreateFeatureForm(string i_FeatureFormToCreate, ToggleNightMode i_ToggleNightMode)
         {
             Form formToCreate = new Form();
 
-            if(sr_FeatureFormSet.Contains(i_FeatureFormToCreate))
+            if (sr_FeatureFormSet.Contains(i_FeatureFormToCreate))
             {
                 switch (i_FeatureFormToCreate)
                 {
                     case "The Best Fan":
-                        formToCreate = new BestFanForm();
+                        formToCreate = new BestFanForm(i_ToggleNightMode);
                         break;
                     case "The Mirror":
-                        formToCreate = new MirrorForm();
+                        formToCreate = new MirrorForm(i_ToggleNightMode);
                         break;
                 }
             }
@@ -37,7 +42,7 @@ namespace Ex02.DesktopGUI
             return formToCreate;
         }
 
-        public static void CreateFeaturesButtonsOnPanel(IFeaturesControls i_FeaturesControls, Panel i_DisplaySubPanel)
+        public static void CreateFeaturesButtonsOnPanel(IFeaturesControls i_FeaturesControls, Panel i_DisplaySubPanel, ToggleNightMode i_ToggleNightMode)
         {
             int counter = 1;
 
@@ -63,7 +68,18 @@ namespace Ex02.DesktopGUI
                 i_DisplaySubPanel.Controls.Add(newButton);
                 // Details button end
                 // Add new event on click
-                newButton.Click += new System.EventHandler(i_FeaturesControls.SomeFeaturesButton_Click);
+                newButton.Click += new EventHandler(i_FeaturesControls.SomeFeaturesButton_Click);
+                sr_ListButton.Add(newButton);
+            }
+
+            i_ToggleNightMode.PropertyChanged += changeViewMode;
+        }
+
+        private static void changeViewMode(object sender, PropertyChangedEventArgs e)
+        {
+            foreach (Button button in sr_ListButton)
+            {
+                ToggleNightMode.ChangeObjectColor(button, sr_ButtonRegularColor, sr_DarkButtonColor);
             }
         }
     }

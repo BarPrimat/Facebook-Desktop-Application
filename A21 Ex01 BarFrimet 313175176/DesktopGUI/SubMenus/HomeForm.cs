@@ -5,6 +5,8 @@ using System.Windows.Forms;
 using DesktopGUI;
 using FacebookWrapper.ObjectModel;
 using Ex02.Logic;
+using System.Drawing;
+using System.ComponentModel;
 
 namespace Ex02.DesktopGUI
 {
@@ -13,13 +15,23 @@ namespace Ex02.DesktopGUI
         private const bool k_ObjectIsVisible = true;
         private readonly MainMenuForm r_ParentForm;
         private readonly User r_LoggedInUser = null;
+        private const bool k_ForceMessageToShow = true;
+        private static readonly Color sr_ButtonRegularColor = SystemColors.ActiveCaption;
+        private static readonly Color sr_DarkButtonColor = Color.DarkGray;
 
-        public HomeForm(MainMenuForm i_ParentForm)
+        public HomeForm(MainMenuForm i_ParentForm, ToggleNightMode i_ToggleNightMode)
         {
             InitializeComponent();
             r_LoggedInUser = Session.Instance.LoggedInUser;
+            i_ToggleNightMode.PropertyChanged += changeViewMode;
+            ToggleNightMode.ChangeObjectColor(this, sr_ButtonRegularColor, sr_DarkButtonColor);
             r_ParentForm = i_ParentForm;
             showInfo();
+        }
+
+        private void changeViewMode(object sender, PropertyChangedEventArgs e)
+        {
+            ToggleNightMode.ChangeObjectColor(this, sr_ButtonRegularColor, sr_DarkButtonColor);
         }
 
         private void logoutButton_Click(object sender, EventArgs e)
@@ -143,7 +155,7 @@ namespace Ex02.DesktopGUI
             }
             catch(Exception e)
             {
-                showMessageBoxIfFormIsAccessible(e.Message);
+                showMessageBoxIfFormIsAccessible(e.Message, k_ForceMessageToShow);
             }
         }
 
@@ -247,13 +259,17 @@ namespace Ex02.DesktopGUI
             }
             catch(Exception ex)
             {
-                showMessageBoxIfFormIsAccessible(ex.Message);
+                showMessageBoxIfFormIsAccessible(ex.Message, k_ForceMessageToShow);
             }
         }
 
         private void showMessageBoxIfFormIsAccessible(string i_ExceptionMessage)
         {
-            if (this.IsAccessible)
+            showMessageBoxIfFormIsAccessible(i_ExceptionMessage, !k_ForceMessageToShow);
+        } 
+        private void showMessageBoxIfFormIsAccessible(string i_ExceptionMessage, bool i_ForceMessageToShow)
+        {
+            if (this.IsAccessible || i_ForceMessageToShow)
             {
                 MessageBox.Show(i_ExceptionMessage);
             }

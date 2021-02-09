@@ -1,4 +1,5 @@
-﻿using FacebookWrapper.ObjectModel;
+﻿using System;
+using FacebookWrapper.ObjectModel;
 using System.Collections.Generic;
 
 namespace Ex02.Logic.facade
@@ -18,13 +19,17 @@ namespace Ex02.Logic.facade
 
         public void Analyzer()
         {
-            foreach (Album album in r_LoggedInUser.Albums)
+            PhotoIterator userPhotos = new PhotoIterator(r_LoggedInUser.Albums);
+            var photoEnumerator = userPhotos.GetEnumerator();
+
+            try
             {
-                foreach (Photo photo in album.Photos)
+                while (photoEnumerator.MoveNext())
                 {
-                    analyzeOptions(photo);
+                    analyzeOptions(photoEnumerator.Current);
                 }
             }
+            catch { }
         }
 
         private void analyzeOptions(Photo i_Photo)

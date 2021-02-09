@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Drawing;
 using System.Windows.Forms;
 using Ex02.Logic;
 
@@ -7,9 +9,19 @@ namespace Ex02.DesktopGUI
 {
     public partial class MirrorForm : Form
     {
-        public MirrorForm()
+        private static readonly Color sr_ButtonRegularColor = SystemColors.ActiveCaption;
+        private static readonly Color sr_DarkButtonColor = Color.DarkGray;
+
+        public MirrorForm(ToggleNightMode i_ToggleNightMode)
         {
             InitializeComponent();
+            ToggleNightMode.ChangeObjectColor(this, sr_ButtonRegularColor, sr_DarkButtonColor);
+            i_ToggleNightMode.PropertyChanged += changeViewMode;
+        }
+
+        private void changeViewMode(object sender, PropertyChangedEventArgs e)
+        {
+            ToggleNightMode.ChangeObjectColor(this, sr_ButtonRegularColor, sr_DarkButtonColor);
         }
 
         private void letsStartButton_Click(object sender, EventArgs e)

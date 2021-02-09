@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Drawing;
 using System.Windows.Forms;
 using Ex02.Logic;
 using FacebookWrapper.ObjectModel;
@@ -9,13 +11,22 @@ namespace Ex02.DesktopGUI
     public partial class AlbumForm : Form
     {
         private const int k_NumberOfPartialPhotoToShow = 4;
+        private static readonly Color sr_ButtonRegularColor = SystemColors.ActiveCaption;
+        private static readonly Color sr_DarkButtonColor = Color.DarkGray;
         private Dictionary<Tuple<string, string>, Photo> m_PhotoFromAlbum = new Dictionary<Tuple<string, string>, Photo>();
         private readonly User m_LoggedInUser = null;
 
-        public AlbumForm()
+        public AlbumForm(ToggleNightMode i_ToggleNightMode)
         {
             InitializeComponent();
             m_LoggedInUser = Session.Instance.LoggedInUser;
+            ToggleNightMode.ChangeObjectColor(this, sr_ButtonRegularColor, sr_DarkButtonColor);
+            i_ToggleNightMode.PropertyChanged += changeViewMode;
+        }
+
+        private void changeViewMode(object sender, PropertyChangedEventArgs e)
+        {
+            ToggleNightMode.ChangeObjectColor(this, sr_ButtonRegularColor, sr_DarkButtonColor);
         }
 
         private void albumLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
