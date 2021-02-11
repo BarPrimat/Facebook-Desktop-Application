@@ -5,15 +5,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Ex02.Logic.facade
+namespace Ex03.Logic.Facade
 {
     public class PhotoIterator : IEnumerable<Photo>
     {
         private FacebookObjectCollection<Album> m_UserAlbums;
 
-        public PhotoIterator(FacebookObjectCollection<Album> i_UserAlbums)
+        public PhotoIterator()
         {
-            this.m_UserAlbums = i_UserAlbums;
+            this.m_UserAlbums = Session.Instance.LoggedInUser.Albums;
         }
 
         public IEnumerator<Photo> GetEnumerator()

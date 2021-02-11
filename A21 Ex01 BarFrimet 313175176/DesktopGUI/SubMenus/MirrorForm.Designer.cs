@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace Ex02.DesktopGUI
+namespace Ex03.DesktopGUI
 {
     partial class MirrorForm
     {

@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace Ex02.DesktopGUI
+namespace Ex03.DesktopGUI
 {
     public class ToggleNightMode
     {
@@ -16,7 +16,7 @@ namespace Ex02.DesktopGUI
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public void invokeModePropertyChanged()
+        public void InvokeModePropertyChanged()
         {
             if (PropertyChanged != null)
             {

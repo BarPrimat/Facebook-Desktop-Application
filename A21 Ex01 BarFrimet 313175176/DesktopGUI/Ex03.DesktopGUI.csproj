@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{DE103C3B-DA92-4BAC-A713-BA8EF5016EFA}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Ex02.DesktopGUI</RootNamespace>
-    <AssemblyName>Ex02.DesktopGUI</AssemblyName>
+    <RootNamespace>Ex03.DesktopGUI</RootNamespace>
+    <AssemblyName>Ex03.DesktopGUI</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -49,7 +49,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Ex02.DesktopGUI.Program</StartupObject>
+    <StartupObject>Ex03.DesktopGUI.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Facebook, Version=6.0.10.0, Culture=neutral, PublicKeyToken=58cb4f2111d1e6de, processorArchitecture=MSIL">
@@ -166,13 +166,14 @@
     <Content Include="Resources\facebook-like-beer-icon-logo-085B2FDDC2-seeklogo.com.png" />
     <Content Include="Resources\FacebookIcon.ico" />
     <Content Include="Resources\facebook_logo_blog.jpg" />
+    <Content Include="Resources\moon-icon.png" />
     <Content Include="Resources\מראה.png" />
     <Content Include="Resources\facebook-logo.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Logic\Ex02.Logic.csproj">
+    <ProjectReference Include="..\Logic\Ex03.Logic.csproj">
       <Project>{2f9575ab-bd71-4202-b6d4-748cd09c8977}</Project>
-      <Name>Ex02.Logic</Name>
+      <Name>Ex03.Logic</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

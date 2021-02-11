@@ -36,13 +36,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="BestFan.cs" />
-    <Compile Include="facade\AnalyzerOperations.cs" />
-    <Compile Include="facade\PersonalityAnalyzer.cs" />
-    <Compile Include="facade\PhotoAnalyzer.cs" />
-    <Compile Include="facade\PhotoIterator.cs" />
-    <Compile Include="facade\PostAnalyzer.cs" />
+    <Compile Include="Facade\Analyzer.cs" />
+    <Compile Include="Facade\AnalyzerOperations.cs" />
+    <Compile Include="Facade\PersonalityAnalyzer.cs" />
+    <Compile Include="Facade\PhotoAnalyzer.cs" />
+    <Compile Include="Facade\PhotoIterator.cs" />
+    <Compile Include="Facade\PostAnalyzer.cs" />
     <Compile Include="Session.cs" />
-    <Compile Include="facade\WordsDatabase.cs" />
+    <Compile Include="Facade\WordsDatabase.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Facebook, Version=6.0.10.0, Culture=neutral, PublicKeyToken=58cb4f2111d1e6de, processorArchitecture=MSIL">

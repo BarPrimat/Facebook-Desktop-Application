@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Ex02.DesktopGUI
+namespace Ex03.DesktopGUI
 {
     public class FeaturesFormFactoryMethod
     {

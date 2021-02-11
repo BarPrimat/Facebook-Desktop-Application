@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using FacebookWrapper.ObjectModel;
 
-namespace Ex02.Logic.facade
+namespace Ex03.Logic.Facade
 {
-    public class PostAnalyzer
+    public class PostAnalyzer : Analyzer
     {
         private readonly Dictionary<string, int> r_PatternAndThereAmountDictionary;
         private readonly User r_LoggedInUser;

@@ -1,4 +1,4 @@
-﻿namespace Ex02.DesktopGUI
+﻿namespace Ex03.DesktopGUI
 {
     sealed partial class MainMenuForm
     {
@@ -39,11 +39,13 @@
             this.facebookPictureBox = new System.Windows.Forms.PictureBox();
             this.mainFillPanel = new System.Windows.Forms.Panel();
             this.mainDownPanel = new System.Windows.Forms.Panel();
+            this.moonIconPictureBox = new System.Windows.Forms.PictureBox();
             this.nightModeCheckBox = new System.Windows.Forms.CheckBox();
             this.panelSideMenu.SuspendLayout();
             this.logoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.facebookPictureBox)).BeginInit();
             this.mainDownPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.moonIconPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSideMenu
@@ -175,6 +177,7 @@
             // mainDownPanel
             // 
             this.mainDownPanel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.mainDownPanel.Controls.Add(this.moonIconPictureBox);
             this.mainDownPanel.Controls.Add(this.nightModeCheckBox);
             this.mainDownPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.mainDownPanel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -183,18 +186,31 @@
             this.mainDownPanel.Size = new System.Drawing.Size(728, 100);
             this.mainDownPanel.TabIndex = 8;
             // 
+            // moonIconPictureBox
+            // 
+            this.moonIconPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.moonIconPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.moonIconPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("moonIconPictureBox.Image")));
+            this.moonIconPictureBox.Location = new System.Drawing.Point(475, 6);
+            this.moonIconPictureBox.Name = "moonIconPictureBox";
+            this.moonIconPictureBox.Size = new System.Drawing.Size(28, 27);
+            this.moonIconPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.moonIconPictureBox.TabIndex = 4;
+            this.moonIconPictureBox.TabStop = false;
+            // 
             // nightModeCheckBox
             // 
             this.nightModeCheckBox.AutoSize = true;
-            this.nightModeCheckBox.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.nightModeCheckBox.Location = new System.Drawing.Point(578, 6);
+            this.nightModeCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.nightModeCheckBox.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.nightModeCheckBox.Location = new System.Drawing.Point(499, 6);
             this.nightModeCheckBox.Name = "nightModeCheckBox";
             this.nightModeCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.nightModeCheckBox.Size = new System.Drawing.Size(138, 29);
+            this.nightModeCheckBox.Size = new System.Drawing.Size(217, 41);
             this.nightModeCheckBox.TabIndex = 0;
             this.nightModeCheckBox.Text = "Night Mode";
             this.nightModeCheckBox.UseVisualStyleBackColor = true;
-            this.nightModeCheckBox.CheckedChanged += new System.EventHandler(this.NightModeCheckBox_CheckedChanged);
+            this.nightModeCheckBox.CheckedChanged += new System.EventHandler(this.nightModeCheckBox_CheckedChanged);
             // 
             // MainMenuForm
             // 
@@ -219,6 +235,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.facebookPictureBox)).EndInit();
             this.mainDownPanel.ResumeLayout(false);
             this.mainDownPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.moonIconPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -236,6 +253,7 @@
         private System.Windows.Forms.Button albumButton;
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.CheckBox nightModeCheckBox;
+        private System.Windows.Forms.PictureBox moonIconPictureBox;
     }
 }
 

@@ -4,11 +4,11 @@ using System.Threading;
 using System.Windows.Forms;
 using DesktopGUI;
 using FacebookWrapper.ObjectModel;
-using Ex02.Logic;
+using Ex03.Logic;
 using System.Drawing;
 using System.ComponentModel;
 
-namespace Ex02.DesktopGUI
+namespace Ex03.DesktopGUI
 {
     public partial class HomeForm : Form
     {
@@ -16,7 +16,8 @@ namespace Ex02.DesktopGUI
         private readonly MainMenuForm r_ParentForm;
         private readonly User r_LoggedInUser = null;
         private const bool k_ForceMessageToShow = true;
-        private static readonly Color sr_ButtonRegularColor = SystemColors.ActiveCaption;
+        // Color can change in the future
+        private static readonly Color sr_RegularFormColor = SystemColors.ActiveCaption;
         private static readonly Color sr_DarkButtonColor = Color.DarkGray;
 
         public HomeForm(MainMenuForm i_ParentForm, ToggleNightMode i_ToggleNightMode)
@@ -24,14 +25,14 @@ namespace Ex02.DesktopGUI
             InitializeComponent();
             r_LoggedInUser = Session.Instance.LoggedInUser;
             i_ToggleNightMode.PropertyChanged += changeViewMode;
-            ToggleNightMode.ChangeObjectColor(this, sr_ButtonRegularColor, sr_DarkButtonColor);
+            ToggleNightMode.ChangeObjectColor(this, sr_RegularFormColor, sr_DarkButtonColor);
             r_ParentForm = i_ParentForm;
             showInfo();
         }
 
         private void changeViewMode(object sender, PropertyChangedEventArgs e)
         {
-            ToggleNightMode.ChangeObjectColor(this, sr_ButtonRegularColor, sr_DarkButtonColor);
+            ToggleNightMode.ChangeObjectColor(this, sr_RegularFormColor, sr_DarkButtonColor);
         }
 
         private void logoutButton_Click(object sender, EventArgs e)

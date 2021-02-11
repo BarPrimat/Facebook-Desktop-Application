@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using FacebookWrapper.ObjectModel;
 
-namespace Ex02.Logic
+namespace Ex03.Logic
 {
     public class BestFan
     {

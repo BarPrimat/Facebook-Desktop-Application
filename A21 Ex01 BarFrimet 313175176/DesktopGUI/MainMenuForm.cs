@@ -5,7 +5,7 @@ using System.Windows.Forms;
 using DesktopGUI;
 using ContentAlignment = System.Drawing.ContentAlignment;
 
-namespace Ex02.DesktopGUI
+namespace Ex03.DesktopGUI
 {
     public sealed partial class MainMenuForm : Form, IFeaturesControls
     {
@@ -13,6 +13,7 @@ namespace Ex02.DesktopGUI
         private static readonly Color sr_LeftPanelColor = Color.Aquamarine;
         private static readonly Color sr_LeftSubPanelColor = Color.DodgerBlue;
         private static readonly Color sr_PanelAndButtonRegularColor = Color.FromArgb(105, 128, 168);
+        private static readonly Color sr_GrayColor = Color.FromArgb(85, 85, 85);
         private Form m_ActionForm;
         private readonly Panel r_LeftBorderPanelForButton;
         private Button m_CurrentButton;
@@ -171,17 +172,18 @@ namespace Ex02.DesktopGUI
         private void toggleToNightMode(object sender, PropertyChangedEventArgs e)
         {
             ToggleNightMode.ChangeObjectColor(panelSideMenu, sr_PanelAndButtonRegularColor);
+            ToggleNightMode.ChangeObjectColor(r_LeftBorderPanelForSubButton, sr_LeftSubPanelColor, Color.Black);
             ToggleNightMode.ChangeObjectColor(homeButton, sr_PanelAndButtonRegularColor);
             ToggleNightMode.ChangeObjectColor(albumButton, sr_PanelAndButtonRegularColor);
             ToggleNightMode.ChangeObjectColor(featuresButton, sr_PanelAndButtonRegularColor);
             ToggleNightMode.ChangeObjectColor(exitButton, sr_PanelAndButtonRegularColor);
-            ToggleNightMode.ChangeObjectColor(mainDownPanel, SystemColors.GradientActiveCaption, Color.DarkCyan);
-            ToggleNightMode.ChangeObjectColor(logoPanel, SystemColors.GradientActiveCaption);
+            ToggleNightMode.ChangeObjectColor(mainDownPanel, SystemColors.GradientActiveCaption, sr_GrayColor);
+            ToggleNightMode.ChangeObjectColor(logoPanel, SystemColors.GradientActiveCaption, sr_GrayColor);
         }
 
-        private void NightModeCheckBox_CheckedChanged(object sender, EventArgs e)
+        private void nightModeCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            r_ToggleNightMode.invokeModePropertyChanged();
+            r_ToggleNightMode.InvokeModePropertyChanged();
         }
     }
 }

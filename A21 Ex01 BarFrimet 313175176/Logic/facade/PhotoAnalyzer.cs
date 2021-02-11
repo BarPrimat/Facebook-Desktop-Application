@@ -2,16 +2,14 @@
 using FacebookWrapper.ObjectModel;
 using System.Collections.Generic;
 
-namespace Ex02.Logic.facade
+namespace Ex03.Logic.Facade
 {
-    public class PhotoAnalyzer
+    public class PhotoAnalyzer : Analyzer
     {
         private readonly Dictionary<string, int> r_PatternAndThereAmountDictionary;
-        private readonly User r_LoggedInUser;
 
         public PhotoAnalyzer()
         {
-            r_LoggedInUser = Session.Instance.LoggedInUser;
             r_PatternAndThereAmountDictionary = new Dictionary<string, int>();
         }
 
@@ -19,7 +17,7 @@ namespace Ex02.Logic.facade
 
         public void Analyzer()
         {
-            PhotoIterator userPhotos = new PhotoIterator(r_LoggedInUser.Albums);
+            PhotoIterator userPhotos = new PhotoIterator();
             var photoEnumerator = userPhotos.GetEnumerator();
 
             try

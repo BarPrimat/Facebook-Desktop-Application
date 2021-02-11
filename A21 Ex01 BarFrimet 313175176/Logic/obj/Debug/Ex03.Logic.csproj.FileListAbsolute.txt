@@ -1,0 +1,7 @@
+C:\Users\Bar\Documents\GitHub\Facebook-Desktop-Application\A21 Ex01 BarFrimet 313175176\Logic\obj\Debug\Ex03.Logic.csproj.CoreCompileInputs.cache
+C:\Users\Bar\Documents\GitHub\Facebook-Desktop-Application\A21 Ex01 BarFrimet 313175176\Logic\bin\Debug\Ex02.Logic.dll
+C:\Users\Bar\Documents\GitHub\Facebook-Desktop-Application\A21 Ex01 BarFrimet 313175176\Logic\bin\Debug\Ex02.Logic.pdb
+C:\Users\Bar\Documents\GitHub\Facebook-Desktop-Application\A21 Ex01 BarFrimet 313175176\Logic\obj\Debug\Ex03.Logic.csproj.CopyComplete
+C:\Users\Bar\Documents\GitHub\Facebook-Desktop-Application\A21 Ex01 BarFrimet 313175176\Logic\obj\Debug\Ex02.Logic.dll
+C:\Users\Bar\Documents\GitHub\Facebook-Desktop-Application\A21 Ex01 BarFrimet 313175176\Logic\obj\Debug\Ex02.Logic.pdb
+C:\Users\Bar\Documents\GitHub\Facebook-Desktop-Application\A21 Ex01 BarFrimet 313175176\Logic\obj\Debug\Ex03.Logic.csprojAssemblyReference.cache

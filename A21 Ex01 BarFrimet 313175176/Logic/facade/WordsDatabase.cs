@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Ex02.Logic
+namespace Ex03.Logic.Facade
 {
     public class WordsDatabase
     {
@@ -79,8 +79,8 @@ namespace Ex02.Logic
                 
             };
 
-        public static Dictionary<string, HashSet<string>> WordsAndPatternDictionary => sr_WordsAndPatternDictionary;
+        internal static Dictionary<string, HashSet<string>> WordsAndPatternDictionary => sr_WordsAndPatternDictionary;
 
-        public static HashSet<string> StringExtension => sr_StringExtension;
+        internal static HashSet<string> StringExtension => sr_StringExtension;
     }
 }

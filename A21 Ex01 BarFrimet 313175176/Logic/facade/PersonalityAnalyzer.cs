@@ -1,14 +1,14 @@
 ﻿using System.Collections.Generic;
-using Ex02.Logic.facade;
+using Ex03.Logic.Facade;
 using FacebookWrapper.ObjectModel;
 
-namespace Ex02.Logic
+namespace Ex03.Logic
 {
     public class PersonalityAnalyzer
     {
         private readonly int r_Sensitivity;
-        private readonly PostAnalyzer r_PostAnalyzer;
-        private readonly PhotoAnalyzer r_PhotoAnalyzer;
+        private readonly Analyzer r_PostAnalyzer;
+        private readonly Analyzer r_PhotoAnalyzer;
 
         public PersonalityAnalyzer(int i_Sensitivity)
         {

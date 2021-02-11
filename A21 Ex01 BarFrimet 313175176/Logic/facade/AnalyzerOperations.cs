@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Ex03.Logic.Facade;
 using FacebookWrapper.ObjectModel;
 
-namespace Ex02.Logic.facade
+namespace Ex03.Logic.Facade
 {
     public class AnalyzerOperations
     {
