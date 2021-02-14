@@ -11,7 +11,7 @@ namespace Ex03.DesktopGUI
     public class FeaturesFormFactoryMethod
     {
         private const int k_HeightOfButton = 60;
-        private static readonly Color sr_ButtonRegularColor = Color.FromArgb(105, 128, 168);
+        private static readonly Color sr_ButtonRegularColor = System.Drawing.SystemColors.ActiveCaption;
         private static readonly Color sr_DarkButtonColor = Color.DarkGray;
         private static readonly List<Button> sr_ListButton = new List<Button>();
         private static readonly HashSet<string> sr_FeatureFormSet = new HashSet<string>() { "The Mirror", "The Best Fan" };

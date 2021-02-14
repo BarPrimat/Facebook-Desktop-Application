@@ -70,12 +70,13 @@ namespace Ex03.Logic.Facade
                 { "ברלין", new HashSet<string>() {"man of the world", "interested in germany"}},
                 { "ברצלונה", new HashSet<string>() {"man of the world", "interested in spain"}},
                 { "חברים", new HashSet<string>() {"love the community"}},
-                { "תואר", new HashSet<string>() {"Interested in a degree"}},
+                { "תואר", new HashSet<string>() {"Interested in a degree"}}
                 // Only for testing
+                /*
                 { "בנות", new HashSet<string>() {"love the community"}},
                 { "שווה", new HashSet<string>() {"nothing to learns"}},
                 { "שלי", new HashSet<string>() {"nothing to learns"}}
-                
+                */
                 
             };
 
